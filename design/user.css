@@ -1,0 +1,996 @@
+/* THIS IS WHERE ALL THE STYLING WILL BE DONE */
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins/Poppins-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    src: url('Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 200;
+    src: url('Poppins/Poppins-ExtraLight.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    src: url('Poppins/Poppins-Light.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('Poppins/Poppins-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('Poppins/Poppins-Medium.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('Poppins/Poppins-SemiBold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url('Poppins/Poppins-Bold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    src: url('Poppins/Poppins-ExtraBold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    src: url('Poppins/Poppins-Black.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 100;
+    src: url('Poppins/Poppins-ThinItalic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 200;
+    src: url('Poppins/Poppins-ExtraLightItalic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 300;
+    src: url('Poppins/Poppins-LightItalic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 400;
+    src: url('Poppins/Poppins-Italic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 500;
+    src: url('Poppins/Poppins-MediumItalic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 600;
+    src: url('Poppins/Poppins-SemiBoldItalic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 700;
+    src: url('Poppins/Poppins-BoldItalic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 800;
+    src: url('Poppins/Poppins-ExtraBoldItalic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 900;
+    src: url('Poppins/Poppins-BlackItalic.ttf') format('truetype');
+  }
+  
+  :root {
+    --first-color: #0C5DF4;
+    --bg-color: #12192C;
+    --sub-color: #86CEFC;
+    --white-color: #fff;
+
+    --body-font: 'Poppins', sans-serif;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+
+    --z-fixed: 1;
+    --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+  }
+
+  .topbar {
+    position: fixed;
+    background-color: var(--white-color);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 10fr 0.4fr 1fr;
+    align-items: center;
+    z-index: var(--z-fixed);
+  }
+
+  .topbar .logo h2 {
+    color: var(--bg-color);
+    font-size: .9rem;
+  }
+
+  .topbar .search {
+    position: relative;
+    width: 60%;
+    justify-self: center;
+  }
+
+  .topbar .search input {
+    width: 100%;
+    height: 40px;
+    padding: 0 40px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background: #f5f5f5;
+  }
+
+
+  /* here */
+
+  .topbar .search i {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+  }
+
+  .icon-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #333333;
+    background: none;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 2rem;
+  }
+
+  .icon-button:hover {
+    background: none;
+  }
+
+  .icon-button__badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+    background: red;
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  .sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: 4%;
+    width: 220px;
+    max-height: 0px;
+    overflow: hidden;
+  }
+
+  .sub-menu-wrap.open-menu {
+    max-height: 400px;
+  }
+
+  .sub-menu {
+    background: #eee;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .user-info h3 {
+    font-weight: 500;
+  }
+
+
+  .user-info i {
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+
+  .sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0 10px;
+  }
+
+  .sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin: 12px 0;
+  }
+
+  .sub-menu-link p {
+    width: 100%;
+  }
+
+  .sub-menu-link i {
+    width: 40px;
+    /* background: brown; */
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+  }
+
+  .sub-menu-link span {
+    font-size: 22px;
+    transition: transform 0.5s;
+  }
+
+  .sub-menu-link:hover span {
+    transition: translateX(5px);
+  }
+  
+  .sub-menu-link:hover p {
+    font-weight: bold;
+  }
+
+  .user {
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+
+  .user img {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    height: 70%;
+    width: 70%;
+    object-fit: cover;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 60px;
+    width: 260px;
+    height: calc(100% - 60px);
+    background: var(--bg-color);
+    overflow-x: hidden;
+  }
+
+  .sidebar ul {
+    margin-top: 1px;
+  }
+
+  .sidebar ul li {
+    width: 100%;
+    list-style: none;
+  }
+
+  .sidebar ul li:hover {
+    background: var(--white-color);
+  }
+
+  .sidebar ul li:hover a {
+    color: #299863;
+  }
+
+  .sidebar ul li a {
+    width: 100%;
+    text-decoration: none;
+    color: var(--white-color);
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  .sidebar ul li a i {
+    min-width: 60px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .main {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    /* left: 260px; */
+    min-height: calc(100vh - 60px);
+    background: #f5f5f5;
+  }
+
+  .cards {
+    width: 100%;
+    padding: 35px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+
+  .cards .card {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  .cards .card:hover {
+    background: #299863;
+  }
+
+  .cards .card:hover .number {
+    color: var(--white-color);
+  }
+
+  .cards .card:hover .card-name {
+    color: var(--white-color);
+  }
+
+  .cards .card:hover .icon-box i {
+    color: var(--white-color);
+  }
+
+
+  .number {
+    font-size: 35px;
+    font-weight: 500;
+    color: var(--bg-color);
+  }
+
+  .card-name {
+    color: #888;
+    font-weight: 600;
+  }
+
+  .icon-box i {
+    font-size: 45px;
+    color: #299863;
+  }
+
+
+  /* .charts {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+  }
+
+  .chart {
+    width: 700px;
+    height: 350px;
+    background: var(--white-color);
+    padding: 20px;
+    border-radius: 10px;
+    
+
+
+  }
+
+  .chart h2 {
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #666;
+    text-align: center;
+  } */
+  
+
+  .chartCard {
+    width: 100%;
+    height: 70vh;
+    padding: 20px;
+    display: flex;
+  }
+
+  .chartBox {
+    width: 700px;
+    height: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid 2px #888;    
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  }
+
+
+  .wrapper {
+    width: min(900px, 100% -3rem);
+    margin-inline: auto;
+    margin: 20px;
+    /* border-radius: 2rem; */
+    /* box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08); */
+  }
+
+  .ta {
+    max-height: 280px;
+    overflow-y: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  th {
+    position: sticky;
+    top: 2.6rem;
+    background: #009870;
+    color: white;
+    text-align: left;
+    font-size: .8rem;
+  }
+
+  caption,
+  th,
+  td {
+    padding: .5rem;
+  }
+
+  caption {
+    background: #009879;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;    
+    position: sticky;
+    top: 0;
+  }
+
+  tr:nth-of-type(2n) {
+    background: hsl(0 0% 0% / 0.1);
+  }
+
+
+
+/*
+
+max-width 339
+
+min-width 340
+
+min width 565
+
+min-width 576
+
+min-width 768 hhere
+
+min-width 980
+
+min-width 1023
+
+min-width 1048
+
+min-width 120
+
+min width 1200
+
+*/
+
+@media (max-width:240px) {
+  .card {
+    flex-direction: column;
+    gap: 4px;
+    width: 130px;
+    padding: 20px 20px;
+    
+  }
+
+  .card-content .number {
+    font-size: 1.2rem;
+  }
+
+}
+
+@media (max-width:339px) {
+  .topbar {
+    height: 4.5rem;
+  }
+
+  .topbar .logo h2 {
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+
+  .fa-bell {
+    font-size: 22px;
+    margin-left: 10px;
+  }
+
+  .icon-button {
+    background: none;
+  }
+
+  .card-content .number {
+    font-size: 1.9rem;
+  }
+
+  .chartCard {
+    width: 100%;
+    height: 65vh;
+  }
+
+  td {
+    font-size: 1.2rem;
+    grid-template-columns: 10ch auto;
+    display: grid;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+  }
+
+}
+
+
+@media (min-width:340px) {
+  .topbar {
+    height: 4.9rem;
+  }
+
+  .topbar .logo h2 {
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+
+  .fa-bell {
+    font-size: 1.9rem;
+    margin-left: 10px;
+  }
+
+  .icon-button {
+    background: none;
+  }
+
+  .card-content .number {
+    font-size: 1.9rem;
+  }
+
+  .chartCard {
+    width: 100%;
+    height: 65vh;
+  }
+
+  td {
+    font-size: 1.1rem;
+    grid-template-columns: 12ch auto;
+    display: grid;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+
+  @media (min-width:400px) {
+
+    td {
+      font-size: 1.1rem;
+      grid-template-columns: 17ch auto;
+      display: grid;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      /* color: red; */
+    }
+
+    .chartCard {
+      width: 100%;
+      height: 63vh;
+    }
+
+  }
+
+
+  @media (min-width:500px) {
+    td {
+      font-size: 1rem;
+      grid-template-columns: 23ch auto;
+      display: grid;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      /* color: red; */
+    }
+
+    .chartCard {
+      width: 100%;
+      height: 61vh;
+    }
+
+  }
+
+
+ @media (min-width:576px) {
+
+  .topbar {
+    height: 4.7rem;
+  }
+
+  .topbar .logo h2 {
+    font-size: 1.6rem;
+    margin-right: 10px;
+  }
+
+  .fa-bell {
+    font-size: 2rem;
+    margin-left: 10px;
+  }
+
+  .icon-button {
+    background: none;
+  }
+
+  .card-content .number {
+    font-size: 2rem;
+  }
+
+  .chartCard {
+    width: 100%;
+    height: 47vh;
+  }
+
+  td {
+    font-size: 1rem;
+    grid-template-columns: 26ch auto;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .chartCard {
+    width: 100%;
+    height: 58vh;
+  }
+
+ }
+ 
+
+ @media (max-width:650px) {
+  .chartCard {
+    width: 100%;
+    height: 65vh;
+  }
+ }
+
+
+  /* for the table  */
+  
+  @media (max-width:650px) {
+    th {
+      display: none;
+    }
+
+    td {
+      display: grid;
+      gap: 0.5rem;
+      /* grid-template-columns: 15ch auto; */
+      padding: 0.6rem 1rem;
+    }
+
+    td:first-child {
+      padding-top: 2rem;
+    }
+
+    td:last-child {
+      padding-bottom: 2rem;
+    }
+
+    td::before {
+      content: attr(data-cell) ": ";
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+
+    .chartCard {
+      width: 100%;
+      /* height: 58vh; */
+    }
+  }
+
+
+
+  @media  (min-width:651px) {
+    table {
+      display: table;
+    }
+
+    tr {
+      display: table-row;
+    }
+
+    td {
+      display: table-cell;
+    }
+
+    .chartCard {
+      width: 100%;
+      height: 66vh;
+    }
+
+  }
+
+
+  @media  (min-width:768px) {
+
+    table {
+      display: table;
+    }
+
+    tr {
+      display: table-row;
+    }
+
+    .topbar {
+      height: 3.6rem;
+    }
+  
+    .topbar .logo h2 {
+      font-size: 1.1rem;
+      margin-right: 10px;
+    }
+  
+    .fa-bell {
+      font-size: 1.4rem;
+      margin-left: 10px;
+    }
+  
+    .icon-button {
+      background: none;
+    }
+  
+    .card-content .number {
+      font-size: 1.8rem;
+    }
+  
+    .chartCard {
+      width: 100%;
+      height: 68vh;
+    }
+  
+    td {
+      font-size: 1rem;
+      grid-template-columns: 24ch auto;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      display: table-cell;
+    }
+
+    th {
+      font-size: .8rem;
+    }
+
+  }
+
+  @media (min-width:980px) {
+    .topbar {
+      height: 4.8rem;
+    }
+  
+    .topbar .logo h2 {
+      font-size: 1.8rem;
+      margin-right: 10px;
+    }
+  
+    .fa-bell {
+      font-size: 2.1rem;
+      margin-left: 10px;
+    }
+  
+    .icon-button {
+      background: none;
+    }
+
+  }
+
+
+
+
+
+  /* for cards  */
+  @media (max-width:1115px) {
+    .sidebar {
+      width: 60px;
+    }
+
+    .main {
+      width: 100%;
+    }
+
+  }
+
+
+
+  /* for general */
+  @media (max-width:800px) {
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+
+
+  /* for general */
+  @media (max-width:500px) {
+
+    .cards {
+      grid-template-columns: 1fr;
+    }
+
+    .logo h2 {
+      font-size: 20px;
+    }
+
+    .search {
+      width: 80%;
+    }
+
+    .search input {
+      padding: 0 20px;
+    }
+
+    .fa-bell {
+      margin-right: 7px;
+    }
+
+  }
+
+
+
+
+
+
+
+  @media only screen and (max-width: 900px) {
+    .chartBox {
+        width: 100%;
+        height: 380px;
+        padding: 20px;
+        background-color: black;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .chartBox {
+        width: 100%;
+        height: 360px;
+        padding: 20px;
+        background-color: orange;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .chartBox {
+        width: 100%;
+        height: 350px;
+        padding: 20px;
+        background-color: yellow;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .chartBox {
+        width: 100%;
+        height: 320px;
+        padding: 20px;
+        background-color: grey;
+    }
+  }
+
+
+  @media only screen and (max-width: 500px) {
+    .chartBox {
+        width: 100%;
+        height: 320px;
+        padding: 20px;
+        background-color: brown;
+    }
+  }
+
+
+  @media only screen and (max-width: 400px) {
+    .chartBox {
+        width: 100%;
+        height: 340px;
+        padding: 20px;
+        background-color: blue;
+    }
+  }
+
+  
+  @media only screen and (max-width: 300px) {
+    .chartBox {
+        width: 100%;
+        height: 330px;
+        padding: 20px;
+        background-color: pink;
+    }
+  }
+
+
+  @media only screen and (max-width: 200px) {
+    .chartBox {
+
+        background-color: black;
+        width: 150px;
+        height: 150px;
+        padding: 20px;
+    }
+}
+

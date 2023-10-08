@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CHART JS</title>
+
+        <link rel="stylesheet" href="/tools/font-awesome/all.min.css">
+        <link rel="stylesheet" href="/tools/font-awesome/fontawesome.min.css">
+
+        <link rel="stylesheet" href="/design/user.css">
+
+    </head>
+
+    <body>
+
+        <div class="container">
+            
+            <dv class="topbar">
+
+                <div class="logo">
+                    <h2 id="name-container">GG<span>CC</span></h2>
+                </div>
+
+                <div class="search">
+                    <input type="text" id="search" placeholder="search here">
+                    <label for="search"> <i class="fas fa-search"></i></label>
+                </div>
+
+                <button type="button" class="icon-button" onclick="toggleMenu()">
+
+                    <span class="fas fa-bell"></span>
+                    <span class="icon-button__badge">1</span>
+
+                </button>
+
+                <div class="sub-menu-wrap" id="subMenu">
+
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <i class="fab fa-github"></i>
+                            <h3>Fredrick muasya</h3>
+                        </div>
+                        <hr/>
+        
+                        <a href="#" class="sub-menu-link">
+                            <i class="fas fa-home"></i>
+                            <p>Log in</p>
+                            <span>></span>
+                        </a>
+        
+                        <a href="#" class="sub-menu-link">
+                            <i class="fas fa-home"></i>
+                            <p>Log out</p>
+                            <span>></span>
+                        </a>
+        
+                    </div>
+        
+                </div>
+
+                <!-- <img src="img/user.jpg" alt="profile"> -->
+                
+
+            </div>
+
+
+            <div class="main">
+
+                <div class="cards">
+
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="number" id="total-contributions">1,000</div>
+                            <div class="card-name">Employees</div>
+                        </div>
+                        
+                        <div class="icon-box">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="number">$4,500</div>
+                            <div class="card-name">Bank Total</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="number">42</div>
+                            <div class="card-name">Pledge</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="number">68</div>
+                            <div class="card-name">Members</div>
+                        </div>
+
+                        <div class="icon-box">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="chartCard">
+
+                    <div class="chartBox">
+
+                        <canvas id="myChart"></canvas>
+
+                    </div>
+
+                </div>
+
+                <div class="wrapper">
+
+                    <div class="ta">
+
+                        <table>
+                            <caption>
+                                Fredrick
+                            </caption>
+
+
+                            <tbody>
+                                <tr>
+                                    <th>Months</th>
+                                    <th>AMOUNT</th>
+                                    <th>PLEDGE</th>
+                                    <th>MODE</th>
+                                </tr>
+
+                                <tr>
+                                    <td data-cell="month">fredrick</td>
+                                    <td data-cell="amount">22</td>
+                                    <td data-cell="pledge">22</td>
+                                    <td data-cell="mode">22</td>
+                                </tr>
+
+                                <tr>
+                                    <td data-cell="month">fredrick</td>
+                                    <td data-cell="amount">22</td>
+                                    <td data-cell="pledge">22</td>
+                                    <td data-cell="mode">22</td>
+                                </tr>
+
+                                <tr>
+                                    <td data-cell="month">fredrick</td>
+                                    <td data-cell="amount">22</td>
+                                    <td data-cell="pledge">22</td>
+                                    <td data-cell="mode">22</td>    
+                                </tr>
+
+                                <tr>
+                                    <td data-cell="month">fredrick</td>
+                                    <td data-cell="amount">22</td>
+                                    <td data-cell="pledge">22</td>
+                                    <td data-cell="mode">22</td>  
+                                </tr>
+                                
+                                <tr>
+                                    <td data-cell="month">fredrick</td>
+                                    <td data-cell="amount">22</td>
+                                    <td data-cell="pledge">22</td>
+                                    <td data-cell="mode">22</td> 
+                                </tr>
+
+                                <tr>
+                                    <td data-cell="month">fredrick</td>
+                                    <td data-cell="amount">22</td>
+                                    <td data-cell="pledge">22</td>
+                                    <td data-cell="mode">22</td>
+                                </tr>
+
+                                <tr>
+                                    <td data-cell="month">fredrick</td>
+                                    <td data-cell="amount">22</td>
+                                    <td data-cell="pledge">22</td>
+                                    <td data-cell="mode">22</td> 
+                                </tr>
+
+                                <tr>
+                                    <td data-cell="month">fredrick</td>
+                                    <td data-cell="amount">22</td>
+                                    <td data-cell="pledge">22</td>
+                                    <td data-cell="mode">22</td>
+                                </tr>
+
+                                <tr>
+                                    <td data-cell="month">fredrick</td>
+                                    <td data-cell="amount">22</td>
+                                    <td data-cell="pledge">22</td>
+                                    <td data-cell="mode">22</td>
+                                </tr>
+
+                                <tr>
+                                    <td data-cell="month">fredrick</td>
+                                    <td data-cell="amount">22</td>
+                                    <td data-cell="pledge">22</td>
+                                    <td data-cell="mode">22</td>
+                                </tr>
+
+                                <tr>
+                                    <td data-cell="month">fredrick</td>
+                                    <td data-cell="amount">22</td>
+                                    <td data-cell="pledge">22</td>
+                                    <td data-cell="mode">22</td>
+                                </tr>
+
+                                <tr>
+                                    <td data-cell="month">fredrick</td>
+                                    <td data-cell="amount">22</td>
+                                    <td data-cell="pledge">22</td>
+                                    <td data-cell="mode">22</td>
+                                </tr>
+
+                                <tr>
+                                    <td data-cell="month">fred</td>
+                                    <td data-cell="amount">30</td>
+                                    <td data-cell="pledge">30</td>
+                                    <td data-cell="mode">30</td>
+                                </tr>
+
+                                <tr>
+                                    <td data-cell="month">muasya</td>
+                                    <td data-cell="amount">10</td>
+                                    <td data-cell="pledge">10</td>
+                                    <td data-cell="mode">10</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+        <script src="/tools/distChartjs/chart.umd.js"></script>
+        <script src="/interactivity/javascript/using/chart.js"></script>
+        <script src="/interactivity/javascript/using/forbell.js"></script>
+        <script src="/interactivity/javascript/using/display.js"></script>
+
+    </body>
+    
+</html>
+
+
+

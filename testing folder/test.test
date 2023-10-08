@@ -1,0 +1,116 @@
+original login javascript code 
+
+// This code handles user login and validation
+
+// When the login form is submitted
+document.getElementById('login').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent the default form submission behavior
+
+    // Get the values of username, password, and userID from the form
+    const username = document.getElementById('me').value;
+    const password = document.getElementById('you').value;
+    const userID = document.getElementById('userID').value;
+
+    // Retrieve the user data from local storage or create an empty array
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Check if the entered credentials match any user in the JSON data
+    const foundUser = users.find(user => user.username === username && user.password === password);
+
+    if (foundUser) {
+        // If a user with matching credentials is found, proceed
+        // Check if the entered userID matches the userID associated with the username
+        const userIDs = {
+            "fred": "1",
+            "muasya": "2",
+            "Dan": "3"
+        };
+
+        if (userIDs[username] === userID) {
+            // If the userID matches, it's a successful login
+            alert('Login successful!');
+            window.location.href = 'ss.html';
+        } else {
+            // If the userID doesn't match, show an alert
+            alert('User ID does not exist or is incorrect.');
+            window.location.reload();
+        }
+    } else {
+        // If no user with matching credentials is found, show an alert
+        alert('Invalid username or password. Please try again.');
+        // Redirect to gitin.html or perform other actions as needed
+        window.location.reload();
+    }
+});
+
+console.log(localStorage);
+
+
+
+
+original registration javascript code 
+
+document.getElementById('createAccount').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+
+    // items (new) hashthem 
+    // check if they are duplicates compare them
+
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Check if the username already exists
+
+    // in the indexed db (hashed existing and hashed incoming)
+    const userExists = users.some(user => user.username === username );
+    const passwordExists = users.some(user => user.password === password );
+
+
+    if (userExists && passwordExists) {
+        alert('user already exists please log-in.');
+        window.location.reload();
+
+    } else if (userExists) {
+        alert('username already exists please choose different name.');
+
+    } else if (passwordExists) {
+        alert('password already exists please insert different password.');
+
+    } else {
+        // Register the user if the username is unique
+
+        // to the indexed db in hashed form 
+        
+        const user = { username, password};
+        users.push(user);
+
+        // Update the JSON data
+        localStorage.setItem('users', JSON.stringify(users));
+
+        // // eport the pple data to fredrick.json
+        // const userDataJSON = JSON.stringify(users);
+
+        // const blob = new Blob([userDataJSON], { type: 'application/json' });
+
+        // const a = document.createElement('a');
+
+        // a.href = URL.createObjectURL(blob);
+        // a.download = 'fred.json';
+        // a.style.display = 'none'; //hide the download link
+        // document.body.appendChild(a);
+        // a.click();
+        // document.body.removeChild(a);
+        
+        alert('Registration successful! You can now log in.');
+        window.location.reload();
+
+    }
+
+});
+
+console.log(localStorage);
+// console.;log(;)
+
