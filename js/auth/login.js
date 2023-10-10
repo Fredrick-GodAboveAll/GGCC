@@ -42,7 +42,7 @@ document.getElementById('login').addEventListener('submit', function (e) {
                 if (userIDs[username] === userID) {
                     // If the userID matches, it's a successful login
                     alert('Login successful!');
-                    window.location.href = '/login/user/user.html';
+                    window.location.href = 'user.html';
                 } else {
                     // If the userID doesn't match, show an alert
                     alert('User ID does not exist or is incorrect.');
