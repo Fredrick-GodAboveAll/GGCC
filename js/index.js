@@ -21,8 +21,6 @@ window.onscroll = () => {
 }
 
 
-/*=============== SWIPER PROJECTS ===============*/
-
 
 /*=============== EMAIL JS ===============*/
 
@@ -52,7 +50,7 @@ const sendEmail = (e) => {
 
     }else {
         // service Id - template ID - #form - publice key
-        emailjs.sendForm('service_45fgfgfg','template_4788444','#contact-form','Vdfssffsfsfs')
+        emailjs.sendForm('service_nkuhy2y','template_ww25ue6','#contact-form','yvgEpr9WavK6KgXh3')
             .then(() => {
                 //show message and add color
                 contactMessage.classList.add('color-blue')
