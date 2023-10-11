@@ -138,6 +138,9 @@
     --bg-color: #12192C;
     --sub-color: #86CEFC;
     --white-color: #fff;
+    --dark-orange: #27AE60;
+    --blue: #00b8b8;
+    --theme: ;
 
     --body-font: 'Poppins', sans-serif;
     --normal-font-size: 1rem;
@@ -153,6 +156,10 @@
     margin: 0;
     box-sizing: border-box;
     font-family: var(--body-font);
+  }
+
+  #name-container span {
+    color: var(--blue);
   }
 
   .topbar {
@@ -222,10 +229,10 @@
 
   .icon-button__badge {
     position: absolute;
-    top: -10px;
-    right: -10px;
-    width: 25px;
-    height: 25px;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
     background: red;
     color: var(--white-color);
     display: flex;
@@ -248,9 +255,24 @@
   }
 
   .sub-menu {
-    background: #eee;
+    background: white;
+    box-shadow: var(--box-shadow);
+    border: solid .6px #888;
+    border-radius: 10px;
     padding: 20px;
     margin: 10px;
+  }
+
+  /* .sub-menu-link {
+    margin-bottom: 1rem;
+  } */
+
+  .sub-menu-link .issue {
+    color: var(--bg-color);
+  }
+
+  .fa-flag {
+    color: red;
   }
 
   .user-info {
@@ -325,7 +347,7 @@
     object-fit: cover;
   }
 
-  .sidebar {
+  /* .sidebar {
     position: fixed;
     top: 60px;
     width: 260px;
@@ -364,7 +386,7 @@
     min-width: 60px;
     font-size: 20px;
     text-align: center;
-  }
+  } */
 
   .main {
     position: absolute;
@@ -394,7 +416,7 @@
   }
 
   .cards .card:hover {
-    background: #299863;
+    background: var(--bg-color);
   }
 
   .cards .card:hover .number {
@@ -423,7 +445,7 @@
 
   .icon-box i {
     font-size: 45px;
-    color: #299863;
+    color: var(--dark-orange);
   }
 
 
@@ -496,8 +518,8 @@
   th {
     position: sticky;
     top: 2.6rem;
-    background: #009870;
-    color: white;
+    background: var(--dark-orange);
+    color: var(--white-color);
     text-align: left;
     font-size: .8rem;
   }
@@ -509,7 +531,7 @@
   }
 
   caption {
-    background: #009879;
+    background: var(--dark-orange);
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -543,7 +565,7 @@ min-width 1023
 
 min-width 1048
 
-min-width 120
+min-width 1200
 
 min width 1200
 
@@ -566,7 +588,7 @@ min width 1200
 
 @media (max-width:339px) {
   .topbar {
-    height: 4.5rem;
+    height: 3.6rem;
   }
 
   .topbar .logo h2 {
@@ -575,21 +597,17 @@ min width 1200
   }
 
   .fa-bell {
-    font-size: 22px;
+    font-size: 1.3rem;
     margin-left: 10px;
   }
 
-  .icon-button {
-    background: none;
-  }
-
   .card-content .number {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
   }
 
   .chartCard {
     width: 100%;
-    height: 65vh;
+    height: 62vh;
   }
 
   td {
@@ -605,16 +623,16 @@ min width 1200
 
 @media (min-width:340px) {
   .topbar {
-    height: 4.9rem;
+    height: 3.6rem;
   }
 
   .topbar .logo h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-right: 10px;
   }
 
   .fa-bell {
-    font-size: 1.9rem;
+    font-size: 1.4rem;
     margin-left: 10px;
   }
 
@@ -623,16 +641,16 @@ min width 1200
   }
 
   .card-content .number {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
   }
 
   .chartCard {
     width: 100%;
-    height: 65vh;
+    height: 62vh;
   }
 
   td {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     grid-template-columns: 12ch auto;
     display: grid;
     gap: 0.5rem;
@@ -644,7 +662,7 @@ min width 1200
   @media (min-width:400px) {
 
     td {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       grid-template-columns: 17ch auto;
       display: grid;
       gap: 0.5rem;
@@ -654,7 +672,7 @@ min width 1200
 
     .chartCard {
       width: 100%;
-      height: 63vh;
+      height: 62vh;
     }
 
   }
@@ -662,7 +680,7 @@ min width 1200
 
   @media (min-width:500px) {
     td {
-      font-size: 1rem;
+      font-size: 1.2rem;
       grid-template-columns: 23ch auto;
       display: grid;
       gap: 0.5rem;
@@ -672,7 +690,7 @@ min width 1200
 
     .chartCard {
       width: 100%;
-      height: 61vh;
+      height: 62vh;
     }
 
   }
@@ -681,16 +699,16 @@ min width 1200
  @media (min-width:576px) {
 
   .topbar {
-    height: 4.7rem;
+    height: 3.6rem;
   }
 
   .topbar .logo h2 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     margin-right: 10px;
   }
 
   .fa-bell {
-    font-size: 2rem;
+    font-size: 1.4rem;
     margin-left: 10px;
   }
 
@@ -699,16 +717,11 @@ min width 1200
   }
 
   .card-content .number {
-    font-size: 2rem;
-  }
-
-  .chartCard {
-    width: 100%;
-    height: 47vh;
+    font-size: 1.8rem;
   }
 
   td {
-    font-size: 1rem;
+    font-size: 1.2rem;
     grid-template-columns: 26ch auto;
     gap: 0.5rem;
     padding: 0.6rem 1rem;
@@ -716,7 +729,7 @@ min width 1200
 
   .chartCard {
     width: 100%;
-    height: 58vh;
+    height: 62vh;
   }
 
  }
@@ -725,7 +738,7 @@ min width 1200
  @media (max-width:650px) {
   .chartCard {
     width: 100%;
-    height: 65vh;
+    /* height: 62vh; */
   }
  }
 
@@ -775,26 +788,9 @@ min width 1200
       display: table-row;
     }
 
-    td {
-      display: table-cell;
-    }
-
     .chartCard {
       width: 100%;
-      height: 66vh;
-    }
-
-  }
-
-
-  @media  (min-width:768px) {
-
-    table {
-      display: table;
-    }
-
-    tr {
-      display: table-row;
+      height: 62vh;
     }
 
     .topbar {
@@ -802,7 +798,7 @@ min width 1200
     }
   
     .topbar .logo h2 {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       margin-right: 10px;
     }
   
@@ -819,13 +815,314 @@ min width 1200
       font-size: 1.8rem;
     }
   
+    td {
+      font-size: 1.2rem;
+      grid-template-columns: 26ch auto;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      display: table-cell;
+    }
+  }
+
+
+  @media  (min-width:768px) {
+
+    table {
+      display: table;
+    }
+
+    tr {
+      display: table-row;
+    }
+
+    .topbar {
+      height: 3.7rem;
+    }
+  
+    .topbar .logo h2 {
+      font-size: 1.3rem;
+      margin-right: 10px;
+    }
+  
+    .fa-bell {
+      font-size: 1.5rem;
+      margin-left: 10px;
+    }
+  
+    .icon-button {
+      background: none;
+    }
+  
+    .card-content .number {
+      font-size: 1.9rem;
+    }
+  
+    .chartCard {
+      width: 100%;
+      height: 62vh;
+    }
+  
+    td {
+      font-size: 1.2rem;
+      grid-template-columns: 24ch auto;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      display: table-cell;
+    }
+
+    th {
+      font-size: 1rem;
+    }
+
+  }
+
+  @media (min-width:900px) {
+    table {
+      display: table;
+    }
+
+    tr {
+      display: table-row;
+    }
+
+    .topbar {
+      height: 3.7rem;
+    }
+  
+    .topbar .logo h2 {
+      font-size: 1.5rem;
+      margin-right: 10px;
+    }
+  
+    .fa-bell {
+      font-size: 1.6rem;
+      margin-left: 10px;
+    }
+  
+    .icon-button {
+      background: none;
+    }
+  
+    .card-content .number {
+      font-size: 1.9rem;
+    }
+  
+    .chartCard {
+      width: 100%;
+      height: 62vh;
+    }
+  
+    td {
+      font-size: 1.2rem;
+      grid-template-columns: 24ch auto;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      display: table-cell;
+    }
+
+    th {
+      font-size: .9rem;
+    }
+  }
+
+
+  @media (min-width:980px) {
+    .topbar {
+      height: 3.8rem;
+    }
+  
+    .topbar .logo h2 {
+      font-size: 1.5rem;
+      margin-right: 10px;
+    }
+  
+    .fa-bell {
+      font-size: 1.8rem;
+      margin-left: 10px;
+    }
+  
+    .icon-button {
+      background: none;
+    }
+
+    .card-content .number {
+      font-size: 1.9rem;
+    }
+  
+    .chartCard {
+      width: 100%;
+      height: 62vh;
+    }
+  
+    td {
+      font-size: 1.2rem;
+      grid-template-columns: 24ch auto;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      display: table-cell;
+    }
+
+    th {
+      font-size: 1rem;
+    }
+
+  }
+
+
+  @media (min-width:1023px) {
+    .topbar {
+      height: 3.9rem;
+    }
+  
+    .topbar .logo h2 {
+      font-size: 1.6rem;
+      margin-right: 10px;
+    }
+  
+    .fa-bell {
+      font-size: 1.6rem;
+      margin-left: 10px;
+    }
+  
+    .icon-button {
+      background: none;
+    }
+
+    .card-content .number {
+      font-size: 2rem;
+    }
+  
+    .chartCard {
+      width: 100%;
+      height: 65vh;
+    }
+  
+    td {
+      font-size: 1.2rem;
+      grid-template-columns: 24ch auto;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      display: table-cell;
+    }
+
+    th {
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width:1060px) {
+    .topbar {
+      height: 3.9rem;
+    }
+  
+    .topbar .logo h2 {
+      font-size: 1.3rem;
+      margin-right: 10px;
+    }
+  
+    .fa-bell {
+      font-size: 1.9rem;
+      margin-left: 10px;
+    }
+  
+    .icon-button {
+      background: none;
+    }
+
+    .card-content .number {
+      font-size: 2rem;
+    }
+  
     .chartCard {
       width: 100%;
       height: 68vh;
     }
   
     td {
+      font-size: 1.2rem;
+      grid-template-columns: 24ch auto;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      display: table-cell;
+    }
+
+    th {
       font-size: 1rem;
+    }
+  }
+
+  @media (min-width:1140px) {
+    .topbar {
+      height: 4rem;
+    }
+  
+    .topbar .logo h2 {
+      font-size: 1.3rem;
+      margin-right: 10px;
+    }
+  
+    .fa-bell {
+      font-size: 1.7rem;
+      margin-left: 10px;
+    }
+  
+    .icon-button {
+      background: none;
+    }
+
+    .card-content .number {
+      font-size: 2rem;
+    }
+  
+    .chartCard {
+      width: 100%;
+      height: 68vh;
+    }
+  
+    td {
+      font-size: 1.2rem;
+      grid-template-columns: 24ch auto;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      display: table-cell;
+    }
+
+    th {
+      font-size: 1rem;
+    }
+
+  }
+
+  @media (min-width:1200px) {
+    .topbar {
+      height: 3.9rem;
+    }
+  
+    .topbar .logo h2 {
+      font-size: 1.3rem;
+      margin-right: 10px;
+    }
+  
+    .fa-bell {
+      font-size: 1.6rem;
+      margin-left: 10px;
+    }
+  
+    .icon-button {
+      background: none;
+    }
+
+    .card-content .number {
+      font-size: 2rem;
+    }
+  
+    .chartCard {
+      width: 100%;
+      height: 65vh;
+    }
+  
+    td {
+      font-size: 1.2rem;
       grid-template-columns: 24ch auto;
       gap: 0.5rem;
       padding: 0.6rem 1rem;
@@ -837,29 +1134,6 @@ min width 1200
     }
 
   }
-
-  @media (min-width:980px) {
-    .topbar {
-      height: 4.8rem;
-    }
-  
-    .topbar .logo h2 {
-      font-size: 1.8rem;
-      margin-right: 10px;
-    }
-  
-    .fa-bell {
-      font-size: 2.1rem;
-      margin-left: 10px;
-    }
-  
-    .icon-button {
-      background: none;
-    }
-
-  }
-
-
 
 
 
@@ -912,44 +1186,79 @@ min width 1200
   }
 
 
+  @media only screen and (max-width: 1200px) {
+    .chartBox {
+        /* width: 100%; */
+        height: 360px;
+        padding: 20px;
+        /* background-color: lightseagreen; */
+    }
+  }
 
 
+  @media only screen and (max-width: 1160px) {
+    .chartBox {
+        /* width: 100%; */
+        height: 360px;
+        padding: 20px;
+        /* background-color: lightseagreen; */
+    }
+  }
 
+  @media only screen and (max-width: 1100px) {
+    .chartBox {
+        /* width: 100%; */
+        height: 340px;
+        padding: 20px;
+        /* background-color: greenyellow; */
+    }
+  }
+
+
+  @media only screen and (max-width: 1000px) {
+    .chartBox {
+        width: 100%;
+        height: 330px;
+        padding: 20px;
+        /* background-color: black; */
+    }
+  }
 
 
   @media only screen and (max-width: 900px) {
     .chartBox {
         width: 100%;
-        height: 380px;
+        height: 330px;
         padding: 20px;
-        background-color: black;
+        /* background-color: black; */
     }
   }
 
   @media only screen and (max-width: 800px) {
     .chartBox {
         width: 100%;
-        height: 360px;
+        height: 330px;
         padding: 20px;
-        background-color: orange;
+        /* background-color: orange; */
     }
   }
 
   @media only screen and (max-width: 700px) {
     .chartBox {
         width: 100%;
-        height: 350px;
+        height: 330px;
         padding: 20px;
-        background-color: yellow;
+        /* background-color: yellow; */
     }
+
   }
 
   @media only screen and (max-width: 600px) {
     .chartBox {
         width: 100%;
-        height: 320px;
+        height: 330px;
         padding: 20px;
-        background-color: grey;
+        /* background-color: grey; */
     }
   }
 
@@ -957,9 +1266,9 @@ min width 1200
   @media only screen and (max-width: 500px) {
     .chartBox {
         width: 100%;
-        height: 320px;
+        height: 330px;
         padding: 20px;
-        background-color: brown;
+        /* background-color: brown; */
     }
   }
 
@@ -967,9 +1276,9 @@ min width 1200
   @media only screen and (max-width: 400px) {
     .chartBox {
         width: 100%;
-        height: 340px;
+        height: 330px;
         padding: 20px;
-        background-color: blue;
+        /* background-color: blue; */
     }
   }
 

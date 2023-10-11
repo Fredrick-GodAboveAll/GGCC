@@ -1,1 +1,141 @@
-[]
+[
+    {
+        "Id": 1,
+        "Name": "hi",
+        "Contributions": [
+            {
+                "Year": 2023,
+                "Month": "Jan",
+                "Amount": 400,
+                "Pledge": 0,
+                "Mode": "b"
+            },
+            {
+                "Year": 2023,
+                "Month": "Feb",
+                "Amount": 140,
+                "Pledge": 0,
+                "Mode": "m"
+            },
+            {
+                "Year": 2023,
+                "Month": "Mar",
+                "Amount": 41,
+                "Pledge": 0,
+                "Mode": "m"
+            },
+            {
+                "Year": 2023,
+                "Month": "April",
+                "Amount": 70,
+                "Pledge": 0,
+                "Mode": "m"
+            },
+            {
+                "Year": 2023,
+                "Month": "June",
+                "Amount": 40,
+                "Pledge": 0,
+                "Mode": "m"
+            }
+        ]
+    },
+    {
+        "Id": 2,
+        "Name": "fredrick",
+        "Contributions": [
+            {
+                "Year": 2023,
+                "Month": "Jan",
+                "Amount": 40,
+                "Pledge": 0,
+                "Mode": "b"
+            },
+            {
+                "Year": 2023,
+                "Month": "Feb",
+                "Amount": 50,
+                "Pledge": 0,
+                "Mode": "m"
+            },
+            {
+                "Year": 2023,
+                "Month": "Mar",
+                "Amount": 16,
+                "Pledge": 0,
+                "Mode": "m"
+            },
+            {
+                "Year": 2023,
+                "Month": "April",
+                "Amount": 10,
+                "Pledge": 0,
+                "Mode": "m"
+            },
+            {
+                "Year": 2023,
+                "Month": "Jun",
+                "Amount": 260,
+                "Pledge": 0,
+                "Mode": "m"
+            },
+            {
+                "Year": 2023,
+                "Month": "Jul",
+                "Amount": 200,
+                "Pledge": 0,
+                "Mode": "m"
+            }
+        ]
+    },
+    {
+        "Id": 4198,
+        "Name": "mam junior",
+        "Contributions": [
+            {
+                "Year": 2023,
+                "Month": "Jan",
+                "Amount": 4000,
+                "Pledge": 0,
+                "Mode": "b"
+            },
+            {
+                "Year": 2023,
+                "Month": "Feb",
+                "Amount": 5000,
+                "Pledge": 0,
+                "Mode": "m"
+            },
+            {
+                "Year": 2023,
+                "Month": "Mar",
+                "Amount": 1600,
+                "Pledge": 0,
+                "Mode": "m"
+            },
+            {
+                "Year": 2023,
+                "Month": "April",
+                "Amount": 1000,
+                "Pledge": 0,
+                "Mode": "m"
+            },
+            {
+                "Year": 2023,
+                "Month": "Jun",
+                "Amount": 260,
+                "Pledge": 0,
+                "Mode": "m"
+            },
+            {
+                "Year": 2023,
+                "Month": "Jul",
+                "Amount": 2000,
+                "Pledge": 0,
+                "Mode": "m"
+            }
+        ]
+    }
+
+]
+
