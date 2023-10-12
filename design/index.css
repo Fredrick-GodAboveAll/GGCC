@@ -1048,14 +1048,6 @@ body {
     font-size: 1.2rem;
   }
 
-  .about-content .read-more {
-    padding: .8rem 1rem;
-    border-radius: .5rem;
-    background-color: grey;
-    cursor: pointer;
-    font-size: 1.3rem;
-    color: var(--white);
-  }
 
   .services .heading h2 {
     font-size: 2.1rem;
@@ -1276,13 +1268,6 @@ body {
     font-size: 1.1rem;
   }
 
-  .about-content .read-more {
-    padding: .9rem 1rem;
-    border-radius: .5rem;
-    cursor: pointer;
-    font-size: 1.1rem;
-    color: var(--white);
-  }
 
   .about1 .container {
     margin-bottom: 9rem;
