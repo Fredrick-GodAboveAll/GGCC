@@ -451,7 +451,7 @@ body {
   margin: 1rem 0;
   height: 1.6rem;
   width: 5rem;
-  background-color: #00b8b8;
+  /* background-color: #00b8b8; */
 }
 
 .services .box-container .box h2 {
