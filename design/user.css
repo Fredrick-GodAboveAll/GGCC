@@ -1288,7 +1288,7 @@ min width 1200
         width: 100%;
         height: 330px;
         padding: 20px;
-        background-color: pink;
+        /* background-color: pink; */
     }
   }
 

@@ -32,7 +32,7 @@ fetchUserData(loggedInUserId)
                 data: {
                     labels: months,
                     datasets: [{
-                        label: 'Amount',
+                        label: 'Your Frequency',
                         data: amounts,
                         backgroundColor: [
                             'rgba(255, 26, 104, 0.2)',
@@ -55,11 +55,12 @@ fetchUserData(loggedInUserId)
                         ],
                         
                         borderWidth: 2,
-                        barPercentage: 0.6
+                        barPercentage: 0.7
                     }]
                 },
                 options: {
                     maintainAspectRatio: false,
+                    indexAxis: 'y',
                     scales: {
                         y: {
                             beginAtZero: true
