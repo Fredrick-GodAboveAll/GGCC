@@ -42,7 +42,7 @@ fetchUserData(loggedInUserId)
                 data: {
                     labels: months,
                     datasets: [{
-                        label: 'Your Frequency',
+                        label: 'Chart',
                         data: amounts,
                         backgroundColor: [
                             'rgba(255, 26, 104, 0.2)',

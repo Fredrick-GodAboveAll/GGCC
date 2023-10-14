@@ -29,6 +29,8 @@ document.getElementById("paymentMeth").addEventListener("change", function() {
 });
 
 // sending 
+
+
 (function () {
     emailjs.init("yvgEpr9WavK6KgXh3"); // Replace with your EmailJS User ID
 })();
@@ -37,20 +39,28 @@ document.getElementById("send-form").addEventListener("submit", function (e) {
     e.preventDefault(); // Prevent the form from submitting in the traditional way
     
     const params = {
-        from_name: document.getElementById("paymentMeth").value,
-        email_id: document.getElementById("paymentDate").value,
+        name: document.getElementById("name").value,
+        method: document.getElementById("paymentMeth").value,
+        date: document.getElementById("paymentDate").value,
         message: document.getElementById("message").value,
     };
 
     emailjs.send("service_nkuhy2y", "template_fexre2d", params) // Replace with your Service ID and Template ID
         .then(function (res) {
             alert("Email sent successfully! Status: " + res.status);
+            clearFormFields(); // Call the function to clear form fields
         })
         .catch(function (error) {
             alert("An error occurred while sending the email: " + error);
         });
 });
 
-
+function clearFormFields() {
+    // Replace these lines with clearing the fields you want
+    document.getElementById("name").value = "";
+    document.getElementById("paymentMeth").value = "";
+    document.getElementById("paymentDate").value = "";
+    document.getElementById("message").value = "";
+}
 
 
