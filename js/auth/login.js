@@ -18,7 +18,6 @@ async function fetchData() {
 
 }
 
-
 // When the login form is submitted
 document.getElementById('login').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent the default form submission behavior

@@ -1,5 +1,15 @@
 const loggedInUserId = parseInt (localStorage.getItem('loggedInUserId'));
 
+var ChartElement = document.getElementById("myChart");
+
+function chart() {
+    if (window.innerWidth <= 768) {
+        // indexAxis = 'y'
+        ChartElement.style.overflowY = "scroll";
+        ChartElement.style.maxHeight = "768px";
+    }
+}
+
 async function fetchUserData(userId) {
     try {
         const response = await fetch('helpers/fred.json');
@@ -60,7 +70,7 @@ fetchUserData(loggedInUserId)
                 },
                 options: {
                     maintainAspectRatio: false,
-                    indexAxis: 'y',
+                    // indexAxis: 'y',
                     scales: {
                         y: {
                             beginAtZero: true
@@ -70,6 +80,7 @@ fetchUserData(loggedInUserId)
             });
 
             document.getElementById('userName').textContent = userName;
+            document.getElementById('user-name').textContent = userName;
 
         } else {
             alert('User not found');

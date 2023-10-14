@@ -11,6 +11,8 @@
 
         <link rel="stylesheet" href="design/user.css">
 
+
+
     </head>
 
     <body>
@@ -92,22 +94,22 @@
 
                     <div class="card">
                         <div class="card-content">
-                            <div class="number">1,7176</div>
-                            <div class="card-name">Bank Total</div>
+                            <div class="number">7,500</div>
+                            <div class="card-name">Expense</div>
                         </div>
                         <div class="icon-box">
-                            <i class="fas fa-building-columns"></i>
+                            <i class="fas fa-toolbox"></i>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-content">
-                            <div class="number">13</div>
-                            <div class="card-name">Members</div>
+                            <div class="number">1,7176</div>
+                            <div class="card-name">Bank Total</div>
                         </div>
 
                         <div class="icon-box">
-                            <i class="fas fa-users-line"></i>
+                            <i class="fas fa-building-columns"></i>
                         </div>
                     </div>
 
@@ -128,9 +130,11 @@
                     <div class="ta">
 
                         <table>
-                            <caption><h4 id="userName"></h4></caption>
+                            <caption>
+                                fredrick
+                            </caption>
 
-                            <!-- <tbody>
+                            <tbody>
                                 <tr>
                                     <th>Months</th>
                                     <th>AMOUNT</th>
@@ -236,7 +240,7 @@
                                     <td data-cell="mode">10</td>
                                 </tr>
 
-                            </tbody> -->
+                            </tbody>
 
                         </table>
 
@@ -244,11 +248,62 @@
 
                 </div>
 
+                <div class="contain">
+                    <div class="box">
+                        <form action="" class="form " id="send-form">
+
+                            <h1 class="form__title" id="user-name"></h1>
+            
+                            <div class="form__message form__message--success"></div>
+                            <div class="form__message form__message--error"></div>
+                            
+                            <div class="form__input-group">
+                                <label for="paymentMeth" class="label">select an option</label>
+                                <select id="paymentMeth" name="paymentMethod" required onchange="enableTextarea()" class="form__input select" autofocus placeholder="Username" >
+        
+                                    <option value="" selected>select</option>
+                                    <option value="Pledge">Pledge</option>
+                                    <option value="Bank">Bank</option>
+                                    <option value="Mpesa">Mpesa</option>
+                                    <option value="Cash">Cash</option>
+
+                                </select>
+
+                                <div class="form__input-error-message"></div>
+                            </div>
+            
+                            <div class="form__input-group">
+                                <label for="mySelect" class="label">select a Date</label>
+                                <input type="date" id="paymentDate" name="paymentDate" class="form__input" autofocus placeholder="Date" required>
+                                <div class="form__input-error-message"></div>
+                            </div>
+            
+                            <div class="form__input-group">
+                                <label for="mySelect" class="label">Transaction Message</label>
+                                <textarea name="message" id="message" disabled class="form__input" autofocus placeholder="message" required></textarea>
+                                <div class="form__input-error-message"></div>
+                            </div>
+                            
+                            <button class="form__button" type="submit">submit</button>
+                            
+            
+                            <p class="form__text">
+                                <a href="#" class="form__link" id="forgotPasswordLink">Much appreciations</a>
+                            </p> 
+                            <p class="form__text">
+                                <a href="#" id="linkCreateAccount"  class="form__link">Thanks for your commitment. God bless you</a>
+                            </p>
+            
+                        </form>
+                    </div>
+                </div>
+                
             </div>
 
         </div>
         
         <script src="tools/distChartjs/chart.umd.js"></script>
+        <script src="tools/@emailjs/browser/dist/email.min.js"></script>
         <!-- <script src="js/using/chart.js"></script> -->
         <script src="js/using/display.js"></script>
         <script src="js/using/forbell.js"></script>
