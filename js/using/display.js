@@ -70,7 +70,7 @@ fetchUserData(loggedInUserId)
                 },
                 options: {
                     maintainAspectRatio: false,
-                    // indexAxis: 'y',
+                    indexAxis: 'y',
                     scales: {
                         y: {
                             beginAtZero: true
