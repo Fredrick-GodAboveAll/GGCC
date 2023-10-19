@@ -31,7 +31,6 @@ async function handleLogin() {
         // console.log(userId);
 
         // future use 
-
         alert('Login successful!');
         window.location.href = `user.html?.=${userId}`;
     
