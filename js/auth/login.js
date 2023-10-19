@@ -31,9 +31,6 @@ async function handleLogin() {
         // console.log(userId);
 
         // future use 
-        function storeUserId(userId){
-            const client = userId
-        }
 
         alert('Login successful!');
         window.location.href = `user.html?.=${userId}`;
@@ -44,7 +41,6 @@ async function handleLogin() {
     }
 }
 
-export {storeUserId};
 // When the login form is submitted
 document.getElementById('login').addEventListener('submit', async (event) => {
     event.preventDefault();
