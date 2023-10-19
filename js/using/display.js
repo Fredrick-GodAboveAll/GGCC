@@ -1,7 +1,14 @@
-const loggedInUserId = parseInt (localStorage.getItem('loggedInUserId'));
+// import { storeUserId } from "../auth/login";
+
+// const uuu = storeUserId
+// console.log(uuu);
+// Function to extract query parameters from the URL
+const urlParams = new URLSearchParams(window.location.search);
+const userId = urlParams.get('.');
 
 
-async function fetchData() {
+// Function to fetch user data based on userId
+async function fetchUserData(userId) {
     try {
         const response = await fetch('helpers/fred.json');
 
@@ -10,28 +17,18 @@ async function fetchData() {
         }
 
         const data = await response.json();
-        return data;
-        
-    } catch (error) {
-        console.error('Error:',error);
-        return [];
-    }
+        const user = data.find(Person => Person.Id == userId);
 
+        return user;
+    } catch (error) {
+        console.error('Error:', error);
+        return null;
+    }
 }
 
-
-document.getElementById('sen').addEventListener('submit', async (event) => {
-    event.preventDefault(); 
-
-    const number = document.getElementById('key').value;
-    // console.log(number);
-
-    const data = await fetchData();
-    const match = data.find(person => person.Id == number);
-    if (match) {
-        alert('user found!');
-        document.getElementById('key').value = "";
-        fetchUserData(loggedInUserId)
+if (userId) {
+    // If userId is present, fetch user data and populate the page
+    fetchUserData(userId)
         .then(user => {
             if (user) {
                 const userName = user.Name;
@@ -40,8 +37,8 @@ document.getElementById('sen').addEventListener('submit', async (event) => {
                 const months = contributions.map(contribution => contribution.Month);
                 const amounts = contributions.map(contribution => contribution.Amount);
 
+                // Chart configuration
                 const ctx = document.getElementById('myChart').getContext('2d');
-
                 const myChart = new Chart(ctx, {
                     type: 'bar',
                     data: {
@@ -58,7 +55,6 @@ document.getElementById('sen').addEventListener('submit', async (event) => {
                                 'rgba(255, 159, 64, 0.2)',
                                 'rgba(0, 0, 0, 0.2)'
                             ],
-                    
                             borderColor: [
                                 'rgba(255, 26, 104, 1)',
                                 'rgba(54, 162, 235, 1)',
@@ -68,7 +64,6 @@ document.getElementById('sen').addEventListener('submit', async (event) => {
                                 'rgba(255, 159, 64, 1)',
                                 'rgba(0, 0, 0, 1)'
                             ],
-                            
                             borderWidth: 2,
                             barPercentage: 0.7
                         }]
@@ -86,99 +81,15 @@ document.getElementById('sen').addEventListener('submit', async (event) => {
 
                 document.getElementById('userName').textContent = userName;
                 document.getElementById('user-name').textContent = userName;
-
             } else {
                 alert('User not found');
             }
-
+        })
+        .catch(error => {
+            console.error(error);
+            alert('Failed to fetch user data');
         });
-    } else {
-        // If the userID doesn't match, show an alert
-        alert('not found');
-
-    }
-    
-
-});
-
-
-
-
-async function fetchUserData(userId) {
-    try {
-        const response = await fetch('helpers/fred.json');
-        if (!response.ok) {
-            throw new Error('failed to fetch data');
-        }
-
-        const data = await response.json();
-        const user = data.find(person => person.Id === userId);
-        return user;
-    } catch (error) {
-        console.error('Error:', error);
-        return [];
-    }
+} else {
+    // If userId is not present, handle the situation (e.g., redirect or show an error message)
+    alert('User ID not provided. Redirect or display an error message as needed.');
 }
-
-
-fetchUserData(loggedInUserId)
-    .then(user => {
-        if (user) {
-            const userName = user.Name;
-            const contributions = user.Contributions;
-
-            const months = contributions.map(contribution => contribution.Month);
-            const amounts = contributions.map(contribution => contribution.Amount);
-
-            const ctx = document.getElementById('myChart').getContext('2d');
-
-            const myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: months,
-                    datasets: [{
-                        label: 'Chart',
-                        data: amounts,
-                        backgroundColor: [
-                            'rgba(255, 26, 104, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)',
-                            'rgba(0, 0, 0, 0.2)'
-                        ],
-                
-                        borderColor: [
-                            'rgba(255, 26, 104, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)',
-                            'rgba(0, 0, 0, 1)'
-                        ],
-                        
-                        borderWidth: 2,
-                        barPercentage: 0.7
-                    }]
-                },
-                options: {
-                    maintainAspectRatio: false,
-                    indexAxis: 'y',
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-
-            document.getElementById('userName').textContent = userName;
-            document.getElementById('user-name').textContent = userName;
-
-        } else {
-            alert('User not found');
-        }
-
-    });
