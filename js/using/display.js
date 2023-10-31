@@ -1,8 +1,5 @@
-// import { storeUserId } from "../auth/login";
 
-// const uuu = storeUserId
-// console.log(uuu);
-// Function to extract query parameters from the URL
+
 const urlParams = new URLSearchParams(window.location.search);
 const userId = urlParams.get('.');
 

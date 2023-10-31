@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hash and Salt Name</title>
+    <script src="tools/bcryptJS/dist/bcrypt.min.js"></script>
+</head>
+<body>
+    <h1>Hash and Salt a Name</h1>
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+    <button onclick="hashAndSaltName()">Hash and Salt</button>
+
+    <h2>Verify Name</h2>
+    <label for="verifyName">Enter name to verify:</label>
+    <input type="text" id="verifyName" placeholder="Enter name to verify">
+    <button onclick="verifyName()">Verify</button>
+    <p id="verificationResult"></p>
+
+    <script>
+        function hashAndSaltName() {
+            const name = document.getElementById("name").value;
+
+            // Check if Web Crypto API's getRandomValues is available
+            if (window.crypto && window.crypto.getRandomValues) {
+                dcodeIO.bcrypt.setRandomFallback((len) => {
+                    const values = new Uint8Array(len);
+                    window.crypto.getRandomValues(values);
+                    return values;
+                });
+            }
+
+            // Generate salt and hash
+            const salt = dcodeIO.bcrypt.genSaltSync(10); // 10 rounds
+            const hashedName = dcodeIO.bcrypt.hashSync(name, salt);
+
+            // Store the hashed name and salt in localStorage
+            localStorage.setItem("hashedName", hashedName);
+            localStorage.setItem("salt", salt);
+
+            alert("Name hashed and salted. Check your browser's console for the result.");
+            console.log("Salt: " + salt);
+            console.log("Hashed Name: " + hashedName);
+        }
+
+        function verifyName() {
+            const verifyName = document.getElementById("verifyName").value;
+            const storedSalt = localStorage.getItem("salt");
+            const storedHashedName = localStorage.getItem("hashedName");
+
+            if (dcodeIO.bcrypt.compareSync(verifyName, storedHashedName)) {
+                document.getElementById("verificationResult").innerText = "Name matches!";
+            } else {
+                document.getElementById("verificationResult").innerText = "Name does not match.";
+            }
+        }
+    </script>
+</body>
+</html>

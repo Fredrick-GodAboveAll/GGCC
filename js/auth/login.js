@@ -17,6 +17,7 @@ async function fetchData() {
     }
 }
 
+
 // Function to handle the login logic
 async function handleLogin() {
     const nameInput = document.getElementById('me').value;
