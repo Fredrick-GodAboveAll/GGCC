@@ -84,7 +84,7 @@
                 "Year": 2023,
                 "Month": "oct",
                 "Amount": 0,
-                "Pledge": 0,
+                "Pledge": 500,
                 "Mode": "m"
             }
         ]
@@ -117,7 +117,7 @@
             {
                 "Year": 2023,
                 "Month": "feb",
-                "Amount": 1000,
+                "Amount": 1500,
                 "Pledge": 0,
                 "Mode": "m"
             },
@@ -174,7 +174,7 @@
                 "Year": 2023,
                 "Month": "oct",
                 "Amount": 0,
-                "Pledge": 0,
+                "Pledge": 1000,
                 "Mode": "m"
             }
         ]
@@ -207,8 +207,8 @@
             {
                 "Year": 2023,
                 "Month": "feb",
-                "Amount": 0,
-                "Pledge": 200,
+                "Amount": 200,
+                "Pledge": 0,
                 "Mode": "m"
             },
             {
@@ -235,8 +235,8 @@
             {
                 "Year": 2023,
                 "Month": "jun",
-                "Amount": 0,
-                "Pledge": 50,
+                "Amount": 50,
+                "Pledge": 0,
                 "Mode": "m"
             },
             {
@@ -624,7 +624,7 @@
                 "Year": 2023,
                 "Month": "oct",
                 "Amount": 0,
-                "Pledge": 0,
+                "Pledge": 200,
                 "Mode": "m"
             }
         ]
@@ -804,7 +804,7 @@
                 "Year": 2023,
                 "Month": "oct",
                 "Amount": 0,
-                "Pledge": 0,
+                "Pledge": 200,
                 "Mode": "m"
             }
         ]
@@ -984,7 +984,7 @@
                 "Year": 2023,
                 "Month": "oct",
                 "Amount": 0,
-                "Pledge": 0,
+                "Pledge": 200,
                 "Mode": "m"
             }
         ]

@@ -14,12 +14,13 @@ async function fetchUserData(userId) {
         }
 
         const data = await response.json();
+        
         const user = data.find(Person => Person.Id == userId);
 
         return user;
     } catch (error) {
         console.error('Error:', error);
-        return null;
+        throw error;
     }
 }
 
@@ -34,6 +35,13 @@ if (userId) {
                 const months = contributions.map(contribution => contribution.Month);
                 const amounts = contributions.map(contribution => contribution.Amount);
 
+                // for pledges button 
+                const PLGButton = document.getElementById("pledgesButton");
+
+                // for filling the table 
+                const table = document.getElementById("tg");
+                const tableBody = table.querySelector("tbody");
+
                 // Chart configuration
                 const ctx = document.getElementById('myChart').getContext('2d');
                 const myChart = new Chart(ctx, {
@@ -41,7 +49,7 @@ if (userId) {
                     data: {
                         labels: months,
                         datasets: [{
-                            label: 'Chart',
+                            label: userName,
                             data: amounts,
                             backgroundColor: [
                                 'rgba(255, 26, 104, 0.2)',
@@ -76,8 +84,46 @@ if (userId) {
                     }
                 });
 
+
+                PLGButton.addEventListener("click", function() {
+                    const pledges = contributions.map(contribution => contribution.Pledge);
+                    myChart.config.data.datasets[0].data = pledges;
+                    myChart.update();
+                });
+
+
+                contributions.forEach(contribution => {
+                    const row = document.createElement("tr");
+        
+                    const monthCell = document.createElement("td");
+                    monthCell.setAttribute("data-cell", "month");
+                    monthCell.textContent = contribution.Month;
+        
+                    const amountCell = document.createElement("td");
+                    amountCell.setAttribute("data-cell", "amount");
+                    amountCell.textContent = contribution.Amount;
+        
+                    const pledgeCell = document.createElement("td");
+                    pledgeCell.setAttribute("data-cell", "pledge");
+                    pledgeCell.textContent = contribution.Pledge;
+        
+                    const modeCell = document.createElement("td");
+                    modeCell.setAttribute("data-cell", "mode");
+                    modeCell.textContent = contribution.Mode;
+        
+                    row.appendChild(monthCell);
+                    row.appendChild(amountCell);
+                    row.appendChild(pledgeCell);
+                    row.appendChild(modeCell);
+        
+                    tableBody.appendChild(row);
+                });
+                
+
                 document.getElementById('userName').textContent = userName;
                 document.getElementById('user-name').textContent = userName;
+
+
             } else {
                 alert('User not found');
             }
@@ -88,5 +134,7 @@ if (userId) {
         });
 } else {
     // If userId is not present, handle the situation (e.g., redirect or show an error message)
-    alert('User ID not provided. Redirect or display an error message as needed.');
+    alert('User ID not provided. Kindly Log-In.');
 }
+
+

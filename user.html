@@ -71,7 +71,7 @@
 
                     <div class="card">
                         <div class="card-content">
-                            <div class="number" id="total-contributions">2,4850</div>
+                            <div class="number" id="total-contributions">24,850</div>
                             <div class="card-name">Total</div>
                         </div>
                         
@@ -102,7 +102,7 @@
 
                     <div class="card">
                         <div class="card-content">
-                            <div class="number">1,7176</div>
+                            <div class="number">17,176</div>
                             <div class="card-name">Bank Total</div>
                         </div>
 
@@ -118,133 +118,29 @@
                     <div class="chartBox">
 
                         <canvas id="myChart"></canvas>
-                        <button class="form__button" onclick="updateChart(0)">pledge</button>
+                        <button id="pledgesButton">Your Pledges</button>
 
                     </div>
 
                 </div>
 
                 <div class="wrapper">
-
-                    <div class="ta">
-
+                    <div class="ta" id="tg">
                         <table>
-                            <caption>
-                                Table
-                            </caption>
-
-                            <!-- <tbody>
+                            <caption>Table</caption>
+                            <thead>
                                 <tr>
-                                    <th>Months</th>
+                                    <th>MONTHS</th>
                                     <th>AMOUNT</th>
                                     <th>PLEDGE</th>
                                     <th>MODE</th>
                                 </tr>
-
-                                <tr>
-                                    <td data-cell="month">fredrick</td>
-                                    <td data-cell="amount">22</td>
-                                    <td data-cell="pledge">22</td>
-                                    <td data-cell="mode">22</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-cell="month">fredrick</td>
-                                    <td data-cell="amount">22</td>
-                                    <td data-cell="pledge">22</td>
-                                    <td data-cell="mode">22</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-cell="month">fredrick</td>
-                                    <td data-cell="amount">22</td>
-                                    <td data-cell="pledge">22</td>
-                                    <td data-cell="mode">22</td>    
-                                </tr>
-
-                                <tr>
-                                    <td data-cell="month">fredrick</td>
-                                    <td data-cell="amount">22</td>
-                                    <td data-cell="pledge">22</td>
-                                    <td data-cell="mode">22</td>  
-                                </tr>
-                                
-                                <tr>
-                                    <td data-cell="month">fredrick</td>
-                                    <td data-cell="amount">22</td>
-                                    <td data-cell="pledge">22</td>
-                                    <td data-cell="mode">22</td> 
-                                </tr>
-
-                                <tr>
-                                    <td data-cell="month">fredrick</td>
-                                    <td data-cell="amount">22</td>
-                                    <td data-cell="pledge">22</td>
-                                    <td data-cell="mode">22</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-cell="month">fredrick</td>
-                                    <td data-cell="amount">22</td>
-                                    <td data-cell="pledge">22</td>
-                                    <td data-cell="mode">22</td> 
-                                </tr>
-
-                                <tr>
-                                    <td data-cell="month">fredrick</td>
-                                    <td data-cell="amount">22</td>
-                                    <td data-cell="pledge">22</td>
-                                    <td data-cell="mode">22</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-cell="month">fredrick</td>
-                                    <td data-cell="amount">22</td>
-                                    <td data-cell="pledge">22</td>
-                                    <td data-cell="mode">22</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-cell="month">fredrick</td>
-                                    <td data-cell="amount">22</td>
-                                    <td data-cell="pledge">22</td>
-                                    <td data-cell="mode">22</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-cell="month">fredrick</td>
-                                    <td data-cell="amount">22</td>
-                                    <td data-cell="pledge">22</td>
-                                    <td data-cell="mode">22</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-cell="month">fredrick</td>
-                                    <td data-cell="amount">22</td>
-                                    <td data-cell="pledge">22</td>
-                                    <td data-cell="mode">22</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-cell="month">fred</td>
-                                    <td data-cell="amount">30</td>
-                                    <td data-cell="pledge">30</td>
-                                    <td data-cell="mode">30</td>
-                                </tr>
-
-                                <tr>
-                                    <td data-cell="month">muasya</td>
-                                    <td data-cell="amount">10</td>
-                                    <td data-cell="pledge">10</td>
-                                    <td data-cell="mode">10</td>
-                                </tr>
-
-                            </tbody> -->
-
+                            </thead>
+                            <tbody>
+                                <!-- Rows will be added here dynamically -->
+                            </tbody>
                         </table>
-
                     </div>
-
                 </div>
 
                 <div class="contain">
