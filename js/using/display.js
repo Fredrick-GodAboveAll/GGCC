@@ -14,15 +14,36 @@ async function fetchUserData(userId) {
         }
 
         const data = await response.json();
+
+        // population of general stuff starts
+        let TotalAmount = 0;
+        let PP = 0;
+
+        for (const person of data) {
+            for (const contribution of person.Contributions) {
+                TotalAmount += contribution.Amount;
+                PP += contribution.Pledge;
+            }
+        }
+
+        const totalAmountDiv = document.getElementById('AllContributions');
+        totalAmountDiv.textContent = TotalAmount;
+        const pgDiv = document.getElementById('PledgeAmountNotHonored');
+        pgDiv.textContent = PP;
+        // population of general stuff ends
+
         
         const user = data.find(Person => Person.Id == userId);
-
         return user;
+
     } catch (error) {
         console.error('Error:', error);
         throw error;
     }
+
 }
+
+
 
 if (userId) {
     // If userId is present, fetch user data and populate the page
@@ -136,5 +157,7 @@ if (userId) {
     // If userId is not present, handle the situation (e.g., redirect or show an error message)
     alert('User ID not provided. Kindly Log-In.');
 }
+
+
 
 
