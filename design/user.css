@@ -464,6 +464,23 @@
   }
 
 
+.btn-pledge {
+  background: white;
+  border: 1px solid #888;
+  border-radius: .5rem;
+  padding: .3rem 1rem;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn-pledge:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+
   .wrapper {
     width: min(900px, 100% -3rem);
     margin-inline: auto;
