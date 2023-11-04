@@ -68,9 +68,9 @@ if (userId) {
                 const myChart = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: 'frequeny',
+                        labels: months,
                         datasets: [{
-                            label: userName,
+                            label: 'Amount',
                             data: amounts,
                             backgroundColor: [
                                 'rgba(255, 26, 104, 0.2)',
