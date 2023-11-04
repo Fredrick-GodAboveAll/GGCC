@@ -70,7 +70,7 @@ if (userId) {
                     data: {
                         labels: months,
                         datasets: [{
-                            label: 'Amount',
+                            label: 'Amount.',
                             data: amounts,
                             backgroundColor: [
                                 'rgba(255, 26, 104, 0.2)',
