@@ -474,103 +474,96 @@ body {
 
 /* events start  */
 
+img {
+  width: 100%;
+}
 
-.banner-container {
-  display: flex;
+.logo img {
+  width: 12rem;
   align-items: center;
-  justify-content: center;
+  border-radius: 5%;
 }
 
-.banner-container .banner {
-  background: linear-gradient(-55deg, #ff7675 29%, #d63031 29.1%, #d63031 68%, #ff7675 68.1%);
-  border-radius: 5px;
-  margin: 10px;
+.discount-container .close-btn {
+  width: 20px;
+}
+
+.discount-container {
+  width: 100%;
+  top: 0;
+  left: 0;
   display: flex;
-  align-items: center;
+  gap: 30px;
   justify-content: center;
-  flex-wrap: wrap;
-  box-shadow: 10px 10px 10px#0005;
-  overflow: hidden;
-}
-
-@keyframes coolAnimation {
-  0%{
-      transform: scale(1);
-      opacity: 1;
-  }
-  50%{
-      transform: scale(1.2);
-      opacity: 1;
-  }
-  100%{
-      transform: scale(1);
-      opacity: 1;
-  }
-}
-
-.fa-church {
-  animation: coolAnimation 4s infinite;
-}
-
-.banner-container .banner .fa-church {
-  flex: 1 1 250px;
-  padding: 15px;
-  text-align: center;
-  font-size: 6rem;
+  align-items: center;
+  width: 100%;
+  background: #023047;
+  background-image: radial-gradient(
+    circle 610px at 5.2% 51%,
+    rgb(5, 8, 144) 0%,
+    rgb(7, 3, 53) 97%
+  );
   color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 8px 0;
+  z-index: 500;
 }
 
-/* .banner-container .banner .shoe img {
-  width: 80%;
-} */
-
-.banner-container .banner .content {
-  flex: 1 1 250px;
-  text-align: center;
-  padding: 10px;
-  text-transform: uppercase;
+.discount-container .discount-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 4px;
 }
 
-.banner-container .banner .content span {
-  color: #eee;
-  font-size: 25px;
+.discount-container .discount-subheading {
+  font-size: 16px;
 }
 
-.banner-container .banner .content h3 {
-  color: #eee;
-  font-size: 40px;
+.discount-container .countdown-timer {
+  display: flex;
+  gap: 16px;
 }
 
-.banner-container .banner .content p {
-  color: #eee;
-  font-size: 20px;
-  padding: 10px 0;
+.countdown-timer .group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
 }
 
-.banner-container .banner .content .btn {
-  display: block;
-  height: 40px;
-  width: 150px;
-  line-height: 40px;
+.countdown-timer .value {
   background: #fff;
-  color: black;
-  text-decoration: none;
-  margin: 5px auto;
-  border-radius: 21px;
-}
-
-.banner-container .banner .content .btn:hover {
-  background-color: black;
-  color: white;
-}
-
-
-.banner-container .banner .fa-user-tie {
-  flex: 1 1 250px;
-  padding: 15px;
+  color: #222;
+  font-size: 18px;
+  font-weight: bold;
+  width: 38px;
+  padding: 8px;
   text-align: center;
-  font-size: 10rem;
-  color: #fff;
+  border-radius: 4px;
+}
+
+.countdown-timer .unit {
+  font-size: 13px;
+}
+
+.discount-btn {
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid var(--white);
+  border-radius: .5rem;
+  padding: .6rem 1rem;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 1.6rem;
+
+}
+
+.discount-btn:hover {
+  color: white;
+  background: black;
+  border: 1px solid white;
 }
 
 
@@ -1247,6 +1240,15 @@ body {
 
 }
 
+@media (max-width: 750px) {
+  .discount-container {
+    flex-direction: column;
+    text-align: center;
+    padding-left: 0;
+    gap: 16px;
+  }
+
+}
 
 @media (max-width:768px){
 
@@ -1329,9 +1331,7 @@ body {
       padding: 0px;
       font-size: 1.2rem;
   } */
-
 }
-
 
 @media screen and (min-width: 768px) {
 
@@ -1485,7 +1485,13 @@ body {
     margin-bottom: 2rem;
   }
   
+}
 
+@media (max-width: 880px) {
+  .discount-container {
+    justify-content: flex-start;
+    padding-left: 30px;
+  }
 }
 
 

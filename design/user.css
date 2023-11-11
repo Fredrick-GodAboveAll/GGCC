@@ -475,11 +475,6 @@
   text-decoration: none;
 }
 
-.btn-pledge:hover {
-  background-color: #000;
-  color: #fff;
-}
-
 
   .wrapper {
     width: min(900px, 100% -3rem);
