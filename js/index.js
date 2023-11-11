@@ -81,3 +81,8 @@ contactForm.addEventListener('submit', sendEmail)
 
 const countDownData = new Date("Nov 14, 2023 8:00:00").getTime();
 
+
+
+// for the advert 
+
+const countDownData = new Date("Nov 14, 2023 8:00:00").getTime();
