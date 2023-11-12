@@ -1,6 +1,6 @@
 [
     {
-        "Id": 1,
+        "Id": "40Pst8",
         "Name": "Pastor Dan",
         "Contributions": [
             { "Month": "nov", "Amount": 400, "Pledge": 0, "Mode": "m" },
@@ -19,7 +19,7 @@
     },
 
     {
-        "Id": 2,
+        "Id": "90562",
         "Name": "Chairman",
         "Contributions": [
             {"Month": "nov", "Amount": 1000, "Pledge": 0, "Mode": "m" },
@@ -33,12 +33,12 @@
             { "Month": "july", "Amount": 1000, "Pledge": 0, "Mode": "m" },
             { "Month": "aug", "Amount": 0, "Pledge": 0, "Mode": "-" },
             { "Month": "sep", "Amount": 1000, "Pledge": 0, "Mode": "m" },
-            { "Month": "oct", "Amount": 0, "Pledge": 1000, "Mode": "m" }
+            { "Month": "oct", "Amount": 1000, "Pledge": 0, "Mode": "m" }
         ]
     },
 
     {
-        "Id": 3,
+        "Id": "53Br9",
         "Name": "Benard",
         "Contributions": [
             {
@@ -128,7 +128,7 @@
         ]
     },
     {
-        "Id": 4,
+        "Id": "73M20",
         "Name": "Moses",
         "Contributions": [
             {
@@ -218,7 +218,7 @@
         ]
     },
     {
-        "Id": 5,
+        "Id": "45P869",
         "Name": "Paul",
         "Contributions": [
             {
@@ -308,7 +308,7 @@
         ]
     },
     {
-        "Id": 6,
+        "Id": "97S7M",
         "Name": "Steve",
         "Contributions": [
             {
@@ -398,7 +398,7 @@
         ]
     },
     {
-        "Id": 7,
+        "Id": "33E1",
         "Name": "Emmanuel",
         "Contributions": [
             {
@@ -578,7 +578,7 @@
         ]
     },
     {
-        "Id": 9,
+        "Id": "0145A",
         "Name": "Daud",
         "Contributions": [
             {
@@ -847,8 +847,9 @@
             }
         ]
     },
+
     {
-        "Id": 12,
+        "Id": "745b1",
         "Name": "Benson",
         "Contributions": [
             {
@@ -937,8 +938,9 @@
             }
         ]
     },
+    
     {
-        "Id": 13,
+        "Id": "4198",
         "Name": "Fredrick",
         "Contributions": [
             {
