@@ -32,12 +32,15 @@ async function handleLogin() {
         // console.log(userId);
 
         // future use 
-        alert('Login successful!');
+        // alert('Login successful!');
+        
+        swal('Good Job', 'You clicked the button!', 'success');
+        
         window.location.href = `user.html?.=${userId}`;
     
     } else {
-        alert('User does not exist.');
-        window.location.href = 'auth.html';
+        // alert('User does not exist.');
+        swal('oops!', 'Incorrect Username or Password Please Try Again!', 'warning');
     }
 }
 
@@ -46,5 +49,3 @@ document.getElementById('login').addEventListener('submit', async (event) => {
     event.preventDefault();
     handleLogin();
 });
-
-

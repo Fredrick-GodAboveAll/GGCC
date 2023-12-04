@@ -8,8 +8,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>GGCC</title>
 
+
         <!--- custom bootstrap for css file-->
         <link rel="stylesheet" href="tools/bootstrap/css/bootstrap.min.css">
+
+        
+        <!-- special styles for special items -->
+        
+
+            <link rel="stylesheet" href="design/advancedD/specialstyle.css">
+            <link rel="stylesheet" href="design/advancedD/prism/prism.css">
+            <link rel="stylesheet" href="design/advancedD/app.min.css">
+            <link rel="stylesheet" href="design/advancedD/components.css">
+            <link rel="stylesheet" href="design/advancedD/custom.css">
+
+            
+
+
+        <!-- dedicated css special style for prism  -->
+
 
         <!--- custom font awesome files -->
         <link rel="stylesheet" href="tools/fontawesome/css/all.min.css">
@@ -45,16 +62,74 @@
                     </nav>
 
                     <!-- <a href="contact" class="link-btn">make appointment</a> -->
-                    <div id="menu-btn" class="fas fa-bars"></div>
-                    
+                    <div class="actions">
+
+                        <div class="far fa-user papi" data-toggle="modal" data-target="#exampleModal"></div>
+                        <div id="menu-btn" class="fas fa-bars"></div>
+                        
+                    </div>
 
                 </div>
-
+                
+                
             </div>
 
         </header>
 
         <!-- home section starts -->
+
+        <!-- Modal with form VALIDATION-->
+        <form class="form" id="login">
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="formModal"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="formModal">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                    <label>Username</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        </div>
+                        <input type="text" id="me" class="form-control" placeholder="Username" name="Username" required>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                    <label>Password</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        </div>
+                        <input type="password" id="Id" class="form-control" placeholder="Your ID" name="password" required>
+                    </div>
+                    </div>
+                    <div class="form-group mb-0">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" name="remember" class="custom-control-input" id="remember-me">
+                        <label class="custom-control-label" for="remember-me">Forgot Pin</label>
+                        <a href="#" id="swal-2">click</a>
+                    </div>
+                    </div>
+                    <button type="submit" class="form__button btn btn-primary m-t-15 waves-effect">LOGIN</button>
+
+                </div>
+                </div>
+            </div>
+            </div>
+        </form>
+
+        <!-- home section starts  -->
 
         <section class="home" id="home">
 
@@ -74,7 +149,6 @@
                         
                         <a href="#contact" class="btn">Talk to us</a> <br/>
                        
-                        <a href="auth.html" class="btn"> Log-In / Register </a>
                     </div>
 
                 </div>
@@ -315,8 +389,25 @@
         <!-- jquery js  -->
         <script src="helpers/jquery-3.7.1.js"></script>
 
+        <!-- HIGH LEVEL INTERACTION JS FROM BETA  -->
+
+            <!-- General JS Scripts -->
+            <script src="design/advancedD/app.min.js"></script>
+
+            <!-- JS Libraies -->
+            <script src="design/advancedD/prism/prism.js"></script>
+
+            <script src="design\advancedD\special.js"></script>
+
+            <script src="design/advancedD/sweetalert/sweetalert.min.js"></script>
+
+        <!-- HIGH LEVEL INTERACTION JS FROM BETA  -->
+
         <!--- custom bootstrap for js file-->
         <script src="tools/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- for login form  -->
+        <script src="js/auth/login.js"></script>
         
         <!-- Custom javascript interactivity file -->
         <script src="js/index.js"></script>

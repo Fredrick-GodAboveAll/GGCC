@@ -322,13 +322,13 @@
 @media screen and (min-width: 576px) {
   
     .header {
-      padding: 1.2rem;
+      padding: 1.1rem;
       border-bottom: var(--border);
       /* background-color: blue; */
     }
   
     .header .logo {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       margin-left: 12px;
     }
   
@@ -554,7 +554,7 @@
 @media screen and (min-width: 768px) {
   
     .header {
-      padding: .3rem;
+      padding: .2rem;
       border-bottom: var(--border);
       /* background-color: greenyellow; */
     }
@@ -711,19 +711,19 @@
   @media screen and (min-width: 1023px) {
   
     .header {
-      padding: .6rem;
+      padding: .2rem;
       border-bottom: var(--border);
       /* background-color: red; */
     }
   
     .header .logo {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
       margin-left: 10px;
     }
   
     .header .nav a {
       margin: .8rem 0;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       padding: 7.4px;
     }
   
@@ -788,19 +788,19 @@
   
   @media screen and (min-width: 1048px) {
     .header {
-      padding: .5rem;
+      padding: .1rem;
       border-bottom: var(--border);
       /* background-color: grey; */
     }
   
     .header .logo {
-      font-size: 1.7rem;
+      font-size: 1.4rem;
       margin-left: 10px;
     }
   
     .header .nav a {
       margin: .8rem 0;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       padding: 8px;
     }
   
@@ -860,7 +860,7 @@
     .header {
       padding: .1rem;
       border-bottom: var(--border);
-      /* background-color: silver; */
+      /* background-color: black; */
     }
   
     .header .logo {
