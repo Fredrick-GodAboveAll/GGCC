@@ -380,8 +380,9 @@
     .message__button {
       width: 60%;
     }
+
   
-  .countdown-timer {
+    .countdown-timer {
       /* background-color: #222; */
       display: flex;
       justify-content: space-around;
