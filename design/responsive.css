@@ -127,6 +127,13 @@
     .contact {
       margin-bottom: 2rem;
     }
+
+    .countdown-timer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Adjust column count as needed */
+      grid-gap: 5px; /* Adjust as needed */
+    }
+  
   
     .footer__title {
       /* margin-top: 25px; */
@@ -223,6 +230,13 @@
       font-size: 1rem;
       color: var(--black);
     }
+
+    .countdown-timer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Adjust column count as needed */
+      grid-gap: 10px; /* Adjust as needed */
+    }
+  
   
   
     .contact h2 {
@@ -331,6 +345,13 @@
       font-size: .8rem;
     }
 
+  .countdown-timer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjust column count as needed */
+    grid-gap: 10px; /* Adjust as needed */
+  }
+  
+
 }
   
   /* special */
@@ -360,7 +381,7 @@
       width: 60%;
     }
   
-    .countdown-timer {
+  .countdown-timer {
       /* background-color: #222; */
       display: flex;
       justify-content: space-around;
