@@ -76,6 +76,23 @@
       font-size: 1rem;
       color: var(--black);
     }
+
+    .jerican {
+      margin-left: var(--mb-1);
+      margin-right: var(--mb-1);
+    }
+
+    .area {
+      margin-left: var(--mb-1);
+      margin-right: var(--mb-1);
+    }
+  
+    .countdown-timer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
   
     .contact h2 {
       font-size: 1.8rem;
@@ -337,6 +354,21 @@
       font-size: 1.2rem;
       padding: 1rem 0;
     }
+
+    .message__input,
+    .message__button {
+      width: 60%;
+    }
+  
+    .countdown-timer {
+      /* background-color: #222; */
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+  
   
     #menu-btn {
       font-size: 1.6rem;
@@ -624,7 +656,17 @@
       line-height: 2;
       font-size: 1.1rem;
     }
-  
+    
+    .jerican {
+      margin-left: var(--mb-1);
+      margin-right: var(--mb-1);
+    }
+
+    .message__container {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+
   
     .contact h2 {
       font-size: 1.8rem;
@@ -850,6 +892,64 @@
       line-height: 2;
       font-size: 1.3rem;
     }
+
+    .jerican {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .new__container {
+        padding-top: 2rem;
+    }
+
+    .new__card {
+      margin-bottom: 5rem;
+    }
+
+    .new__description {
+      font-size: var(--h3-font-size);
+    }
+
+
+    .area {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .message__container {
+      padding: 3.5rem 0;
+      grid-template-columns: repeat(2, max-content);
+      column-gap: 4rem;
+      justify-content: center;
+    }
+  
+    .message__div {
+      text-align: initial;
+    }
+  
+    .message__title {
+      font-size: 1.5rem;
+    }
+  
+    .message__input {
+      display: block;
+      width: 280px;
+    }
+  
+    .message__button {
+      width: initial;
+    }
+  
+    .message__img {
+      width: 320px;
+    }
+
+    .message__img {
+      width: 270px;
+
+    }
+
+
   
   }
   

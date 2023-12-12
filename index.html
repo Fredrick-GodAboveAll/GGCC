@@ -2,13 +2,14 @@
 <html lang="en">
 
     <head>
-        
-        <!---- head default settings for web development -->
+
         <meta charset="UTF-8">
+
+        <!---- head default settings for web development -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>GGCC</title>
 
-
+        
         <!--- custom bootstrap for css file-->
         <link rel="stylesheet" href="tools/bootstrap/css/bootstrap.min.css">
 
@@ -22,8 +23,6 @@
             <link rel="stylesheet" href="design/advancedD/components.css">
             <link rel="stylesheet" href="design/advancedD/custom.css">
 
-            
-
 
         <!-- dedicated css special style for prism  -->
 
@@ -31,6 +30,8 @@
         <!--- custom font awesome files -->
         <link rel="stylesheet" href="tools/fontawesome/css/all.min.css">
         <link rel="stylesheet" href="tools/fontawesome/css/fontawesome.min.css">
+
+        <link rel="stylesheet" href="design/swiper-bundle.min.css">
 
         <!-- Custom CSS core styles file -->
         <link rel="stylesheet" href="design/index.css">
@@ -79,6 +80,7 @@
         <!-- home section starts -->
 
         <!-- Modal with form VALIDATION-->
+
         <form class="form" id="login">
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="formModal"
             aria-hidden="true">
@@ -118,7 +120,6 @@
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" name="remember" class="custom-control-input" id="remember-me">
                         <label class="custom-control-label" for="remember-me">Forgot Pin</label>
-                        <a href="#" id="swal-2">click</a>
                     </div>
                     </div>
                     <button type="submit" class="form__button btn btn-primary m-t-15 waves-effect">LOGIN</button>
@@ -158,6 +159,53 @@
         </section>
 
         <!-- home section ends  -->
+
+
+        <!-- Ad sections starts-->
+
+        <div class="area-box">
+
+            <section class="message area-of area">
+                <div class="message__container grid">
+                    <div class="message__div">
+                        <h2 class="message__title">Ordination <span><b>CEREMONY</b></span> </h2>
+                        <div class="countdown-timer ">
+
+                            <div class="group">
+                                <div class="unit">Days</div>
+                                <div class="value days"></div>
+                                
+                            </div>
+            
+                            <div class="group">
+                                <div class="unit">Hrs</div>
+                                <div class="value hours"></div>
+                                
+                            </div>
+            
+                            <div class="group">
+                                <div class="unit">Min</div>
+                                <div class="value minutes"></div>
+                                
+                            </div>
+            
+                            <div class="group">
+                                <div class="unit">Sec</div>
+                                <div class="value seconds"></div>
+                                
+                            </div>
+            
+                        </div>
+            
+                        <!-- <button class="button message__button">Send Message</button> -->
+                        <p class="message__button" style="text-align: center; color: rgb(174, 6, 163);border-radius: 14px;"><b>HONORING THE ELEVATION OF <br /> PST: Daniel Nzau </b></p>
+                    </div>
+
+                    <img src="tools/images/SSSS.png" alt="" class="message__img" style="border-radius: 12px;">
+                </div>
+            </section>
+
+        </div>
 
 
         <!-- about section starts  -->
@@ -250,9 +298,70 @@
 
         <!-- events starts  -->
 
+        <div class="News">
 
+            <!--==================== NEW ====================-->
+            <section class="new program jerican" id="Updates">
+                <h2 class="heading program__title">New Events</h2>
 
+                <div class="new__container">
+                    <div class="swiper new-swiper">
+                        <div class="swiper-wrapper">
+                            <article class="new__card swiper-slide">
+                                <div class="new__overlay"></div>
 
+                                <img src="tools/images/new1.png" alt="" class="new__img">
+                                <h3 class="new__description">Pst Daniel Kimoni</h3>
+                                <span class="new__title">Ordination Ceremony</span>
+                                
+                                <!-- <button class="button new__button">
+                                    <i class='fas fa-user new__icon'></i>
+                                </button> -->
+                            </article>
+
+                            <article class="new__card swiper-slide">
+                                <div class="new__overlay"></div>
+
+                                <img src="tools/images/new2.png" alt="" class="new__img">
+                                <h3 class="new__description">X-Mas</h3>
+                                <span class="new__title">Christmas is in --</span>
+
+                                <!-- <button class="button new__button">
+                                    <i class='fas fa-heart new__icon'></i>
+                                </button> -->
+                            </article>
+
+                            <article class="new__card swiper-slide">
+                                <div class="new__overlay"></div>
+
+                                <img src="tools/images/new3.png" alt="" class="new__img">
+                                <h3 class="new__description">Dec</h3>
+                                <span class="new__title">Thanks Giving</span>
+
+                                <!-- <button class="button new__button">
+                                    <i class='fas fa-heart new__icon'></i>
+                                </button> -->
+                            </article>
+
+                            <article class="new__card swiper-slide">
+                                <div class="new__overlay"></div>
+
+                                <img src="tools/images/new3.png" alt="" class="new__img">
+                                <h3 class="new__description">New Year</h3>
+                                <span class="new__title">New Year is in --</span>
+
+                                <!-- <button class="button new__button">
+                                    <i class='fas fa-heart new__icon'></i>
+                                </button> -->
+                            </article>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
 
         <!-- events ends  -->
         
@@ -405,6 +514,9 @@
 
         <!--- custom bootstrap for js file-->
         <script src="tools/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="js/swiper-bundle.min.js"></script>
 
         <!-- for login form  -->
         <script src="js/auth/login.js"></script>
