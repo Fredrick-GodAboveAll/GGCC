@@ -379,6 +379,16 @@ img {
   margin: 1.2rem;
 }
 
+.blocking-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    display: inline-block;
+    margin-left: 5px; /* Adjust as needed for spacing */
+}
+
+
 .message__div {
   text-align: center;
 }
