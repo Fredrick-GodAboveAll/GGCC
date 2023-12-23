@@ -96,12 +96,12 @@ let newSwiper = new Swiper(".new-swiper", {
     },
     breakpoints: {
         992: {
-          spaceBetween: 80,
+          spaceBetween: 81,
         },
     },
 });
 
-
+// hi peolple 
 
 // TIMER 
 
