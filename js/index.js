@@ -106,7 +106,7 @@ let newSwiper = new Swiper(".new-swiper", {
 // TIMER 
 
 
-const countDownData = new Date("Dec 17, 2023 12:55:00").getTime();
+const countDownData = new Date("Dec 17, 2023 12:00:00").getTime();
 
 const days = document.querySelector(".days");
 const hours = document.querySelector(".hours");
