@@ -38,6 +38,82 @@
 
         <!-- for the screen sizes  -->
         <link rel="stylesheet" href="design/responsive.css">
+
+        <style>
+
+            .icon-buttonnn {
+                position: relative;
+                display: flex;
+            }
+
+            .icon-button__badge {
+                position: absolute;
+                transform: rotate(-15deg);
+                top: -7px;
+                right: 4.1rem;
+                width: 48px;
+                height: 40px;
+                transform: translate();
+                /* background: red; */
+                /* color: white; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* border-radius: 50%; */
+            }
+
+            @media screen and (max-width: 339px) {
+                .icon-button__badge {
+                    right: 3.2rem;
+                    /* background-color: black; */
+                    width: 45px;
+                    height: 30px;
+                    top: -1px;
+                }
+            }
+
+            @media screen and (min-width: 340px) {
+                .icon-button__badge {
+                    right: 2.9rem;
+                    /* background-color: red; */
+                    width: 41px;
+                    height: 40px;
+                    top: -3px;
+                }
+            }
+
+            @media screen and (min-width: 350px) {
+                .icon-button__badge {
+                    right: 2.7rem;
+                    /* background-color: rgb(226, 220, 220); */
+                    width: 45px;
+                    height: 30px;
+                    top: -2px;
+                }
+            }
+
+            
+            @media screen and (min-width: 576px) {
+                .icon-button__badge {
+                    right: 3.3rem;
+                    /* background-color: red; */
+                    width: 45px;
+                    height: 34px;
+                    top: -2px;
+                }
+            }
+
+            @media screen and (min-width: 700px) {
+                .icon-button__badge {
+                    right: 4rem;
+                    /* background-color: red; */
+                    width: 48px;
+                    height: 38px;
+                    top: -2px;
+                }
+            }
+
+        </style>
         
     </head>
 
@@ -52,7 +128,10 @@
 
                 <div class="row align-items-center justify-content-between">
 
-                    <a href="#home" class="logo">GG<span>CC</span></a>
+                    <div class="icon-buttonnn">
+                        <a href="#home" class="logo">GG<span>CC</span></a>
+                        <img src="hattt.png" class="icon-button__badge" alt="badging">
+                    </div>
                     
                     <nav class="nav">
                         <a href="#home">home</a>
@@ -168,7 +247,7 @@
             <section class="message area-of area">
                 <div class="message__container grid">
                     <div class="message__div">
-                        <h2 class="message__title">Ordination <span><b>CEREMONY</b></span> </h2>
+                        <h2 class="message__title">Merry <span><b>CHRISTMAS</b></span> </h2>
                         <div class="countdown-timer ">
 
                             <div class="group">
@@ -197,11 +276,9 @@
             
                         </div>
             
-                        <!-- <button class="button message__button">Send Message</button> -->
-                        <p class="message__button" style="text-align: center; color: rgb(174, 6, 163);border-radius: 14px;"><b>HONORING THE ELEVATION OF <br /> PST: Daniel Nzau </b></p>
                     </div>
 
-                    <img src="tools/images/SSSS.png" alt="" class="message__img" style="border-radius: 12px;">
+                    <img src="santa.png" alt="" class="message__img" style="border-radius: 12px;">
                 </div>
             </section>
 
@@ -213,10 +290,10 @@
         <section class="about1" id="about2">
             
             <div class="heading">
-                <h3 class="h3">About Us</h3>
+                <h3 class="h3 asi">About Us</h3>
             </div>
     
-            <div class="container">
+            <div class="container l">
     
                 <section class="about">
     
@@ -225,7 +302,7 @@
                     </div>
     
                     <div class="about-content">
-                        <h2>Celebrate God's Glorious Grace</h2>
+                        <h2 class="about__subtitle" style="color: white;">Celebrate God's Glorious Grace</h2>
 
                         <p class="p"> 
                             At GGCC, we warmly welcome the shinning Glory, 
@@ -235,7 +312,7 @@
                             LIMITLESS love of GOD as we journey together. <em>Hebrews 10:9</em>
                         </p>
     
-                        <a href="#" class="read-more">Learn More</a>
+                        <a href="#" class="btn">Learn More</a>
                     </div>
     
                 </section>
@@ -307,24 +384,13 @@
                 <div class="new__container">
                     <div class="swiper new-swiper">
                         <div class="swiper-wrapper">
-                            <article class="new__card swiper-slide">
-                                <div class="new__overlay"></div>
-
-                                <img src="tools/images/new1.png" alt="" class="new__img">
-                                <h3 class="new__description">Pst Daniel Kimoni</h3>
-                                <span class="new__title">Ordination Ceremony</span>
-                                
-                                <!-- <button class="button new__button">
-                                    <i class='fas fa-user new__icon'></i>
-                                </button> -->
-                            </article>
 
                             <article class="new__card swiper-slide">
                                 <div class="new__overlay"></div>
 
-                                <img src="tools/images/new2.png" alt="" class="new__img">
+                                <img src="santa.png" alt="christmas" class="new__img">
                                 <h3 class="new__description">X-Mas</h3>
-                                <span class="new__title">Christmas is in --</span>
+                                <span class="new__title">Merry Christmas</span>
 
                                 <!-- <button class="button new__button">
                                     <i class='fas fa-heart new__icon'></i>
@@ -346,7 +412,7 @@
                             <article class="new__card swiper-slide">
                                 <div class="new__overlay"></div>
 
-                                <img src="tools/images/new3.png" alt="" class="new__img">
+                                <img src="star.png" alt="" class="new__img">
                                 <h3 class="new__description">New Year</h3>
                                 <span class="new__title">New Year is in --</span>
 
@@ -512,8 +578,6 @@
 
         <!-- HIGH LEVEL INTERACTION JS FROM BETA  -->
 
-        <!--=============== SNOW JS ===============-->
-        <script src="https://app.embed.im/snow.js" defer></script>
 
         <!--- custom bootstrap for js file-->
         <script src="tools/bootstrap/js/bootstrap.bundle.min.js"></script>

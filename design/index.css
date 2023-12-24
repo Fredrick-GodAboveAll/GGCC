@@ -196,7 +196,7 @@
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  background-color: antiquewhite;
   color: var(--text-color);
 }
 
@@ -216,17 +216,20 @@ img {
 .heading {
   text-align: center;
   font-size: 2rem;
-  color: var(--black);
+  /* color: #fff; */
   text-transform: uppercase;
   font-weight: bolder;
   margin-bottom: 2rem;
 }
-  
+
+.heading .asi {
+  color: #fff;
+}
 
 .btn {
   display: inline-block;
   background: none;
-  border: 2px solid black;
+  border: 2px solid #fff;
   border-radius: .5rem;
   padding: .6rem 1rem;
   font-size: 14px;
@@ -234,11 +237,13 @@ img {
   font-weight: bold;
   text-decoration: none;
   margin-top: 1.6rem;
+  color: #fff;
+  box-shadow: 7px 7px 7px hsla(0, 0%, 4%, 0.3);
 }
 
 .btn:hover {
   background-color: #000;
-  color: #fff;
+  color: rgb(59, 1, 55);
 }
 
 .link-btn:hover {
@@ -249,7 +254,7 @@ img {
 .header {
   padding: .7rem;
   border-bottom: var(--border);
-  background-color: white;
+  background-color: antiquewhite;
   left: 0;
   right: 0;
 }
@@ -312,7 +317,11 @@ img {
 .home {
   background-size: cover;
   background-position: center;
-  background-color: antiquewhite;
+  background-image: radial-gradient(
+    circle 610px at 4.2% 51%,
+    rgb(213, 37, 192) 9%,
+    rgb(59, 1, 55) 89%
+  );
   overflow: hidden;
 }
 
@@ -324,13 +333,14 @@ img {
 .home .content h3 {
   font-size: 2.2rem;
   text-transform: uppercase;
-  color: var(--black);
+  color: #fff;
+
 }
 
 .home .content p {
   line-height: 1.7;
   font-size: 1.1rem;
-  color: var(--text-color);
+  color: #f9d7ff;
   padding: 1rem 0;
 }
 
@@ -367,6 +377,12 @@ img {
 
 
  /*=============== MESSAGE ===============*/
+
+ .area-box {
+  background-color: rgb(253, 222, 181);
+ }
+ 
+
 .message__container {
   row-gap: 3rem;
   background-image: radial-gradient(
@@ -507,11 +523,23 @@ img {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+
 }
+
+.about1 {
+    background-image: radial-gradient(
+      circle 610px at 4.2% 51%,
+      rgb(213, 37, 192) 9%,
+      rgb(59, 1, 55) 89%
+    );
+}
+
+
 
 .about-image {
   flex: 1;
   margin-right: 40px;
+  margin-bottom: 4rem;
   overflow: hidden;
 }
 
@@ -533,6 +561,10 @@ img {
     flex: 1.3; /* change */
 }
 
+.about-content .p {
+  color: rgb(229, 203, 238);
+}
+
 .about-content h2 {
     font-size: 25px;
     margin-bottom: 15px;
@@ -543,7 +575,6 @@ img {
     width: 110%;
     font-size: 1.2rem;
     line-height: 1.5;
-    color: black;
 }
 
 
@@ -573,7 +604,7 @@ img {
 
 .services {
   /* background-color: rgb(251, 244, 244); */
-  background-color: #fff;
+  background-color: antiquewhite;
 }
 
 .services .box-container {
@@ -641,7 +672,11 @@ img {
 
   .News {
     overflow: hidden;
-    background-color: antiquewhite;
+    background-image: radial-gradient(
+      circle 610px at 4.2% 51%,
+      rgb(213, 37, 192) 9%,
+      rgb(59, 1, 55) 89%
+    );
   }
 
   .program {
@@ -653,6 +688,7 @@ img {
     margin-bottom: var(--mb-2-5);
     text-align: center;
     margin: 2rem;
+    color: white;
   }
 
   /*=============== NEW ===============*/
@@ -728,9 +764,13 @@ img {
 
 /*=============== Contacts ===============*/
 
+.contact {
+  background-color: rgb(253, 222, 181);
+}
 
 .contact__container {
   row-gap: 3.5rem;
+  
 }
 
 .contact__title {
@@ -830,7 +870,7 @@ img {
   top: -.85rem;
   left:1.23rem;
   z-index: 10;
-  background-color: var(--body-color);
+  background-color: rgb(253, 222, 181);
   color: var(--title-color);
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
