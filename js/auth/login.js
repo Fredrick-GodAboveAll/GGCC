@@ -34,13 +34,13 @@ async function handleLogin() {
         // future use 
         // alert('Login successful!');
         
-        swal('Good Job', 'You clicked the button!', 'success');
+        swal('Good Job', 'logged in!', 'success');
         
         window.location.href = `user.html?.=${userId}`;
     
     } else {
         // alert('User does not exist.');
-        swal('oops!', 'Incorrect Username or Password Please Try Again!', 'warning');
+        swal('oops!', 'Incorrect Username or Password Please Try Again!', 'error');
     }
 }
 

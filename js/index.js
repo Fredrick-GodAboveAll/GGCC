@@ -54,7 +54,7 @@ const sendEmail = (e) => {
             .then(() => {
                 //show message and add color
                 contactMessage.classList.add('color-blue')
-                contactMessage.textContent = 'Message sent ✔'
+                contactMessage.textContent = swal('Message sent ✔', 'thank you for contacting us', 'success');
 
                 //Remove the message after 4 seconds 
                 setTimeout(() =>{
@@ -62,7 +62,7 @@ const sendEmail = (e) => {
                 }, 5000)
               
             }, (error) =>{
-                alert('could not sent CONTACT ADMIN!...📩', error)
+                swal('Message not sent', 'An error occurred try again and if it persist kindly contact us!', 'error');
             })
         
         // to clear the input field 
@@ -106,7 +106,7 @@ let newSwiper = new Swiper(".new-swiper", {
 // TIMER 
 
 
-const countDownData = new Date("Dec 17, 2023 12:00:00").getTime();
+const countDownData = new Date("Dec 31, 2023 00:00:00").getTime();
 
 const days = document.querySelector(".days");
 const hours = document.querySelector(".hours");

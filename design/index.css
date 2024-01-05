@@ -223,7 +223,7 @@ img {
 }
 
 .heading .asi {
-  color: #fff;
+  color: black;
 }
 
 .btn {
@@ -243,7 +243,7 @@ img {
 
 .btn:hover {
   background-color: #000;
-  color: rgb(59, 1, 55);
+  color: black;
 }
 
 .link-btn:hover {
@@ -254,7 +254,7 @@ img {
 .header {
   padding: .7rem;
   border-bottom: var(--border);
-  background-color: antiquewhite;
+  background-color: #fff;
   left: 0;
   right: 0;
 }
@@ -378,7 +378,7 @@ img {
 
  /*=============== MESSAGE ===============*/
 
- .area-box {
+ /* .area-box {
   background-color: rgb(253, 222, 181);
  }
  
@@ -401,7 +401,7 @@ img {
     border-radius: 50%;
     background-color: red;
     display: inline-block;
-    margin-left: 5px; /* Adjust as needed for spacing */
+    margin-left: 5px;
 }
 
 
@@ -417,13 +417,11 @@ img {
 }
 
 .message__title span {
-  /* color: rgb(234, 2, 218); */
   color: rgb(254, 225, 80);
 }
 
 
 .message__button {
-  /* background-color: rgb(238, 217, 111); */
   background-color: rgb(255, 253, 255);
   border: 3px solid rgb(232, 42, 219);
   box-shadow: 7px 7px 7px hsla(0, 0%, 4%, 0.3);
@@ -438,7 +436,6 @@ img {
 .message__img {
   width: 180px;
   justify-self: center;
-  /* transform: rotate(15deg); */
 }
 
 .discount-container .countdown-timer {
@@ -478,7 +475,7 @@ img {
 
 .countdown-timer .unit {
   font-size: 16px;
-}
+} */
 
 
 /* about section starts  */
@@ -527,11 +524,7 @@ img {
 }
 
 .about1 {
-    background-image: radial-gradient(
-      circle 610px at 4.2% 51%,
-      rgb(213, 37, 192) 9%,
-      rgb(59, 1, 55) 89%
-    );
+    background-color: white;
 }
 
 
@@ -562,7 +555,7 @@ img {
 }
 
 .about-content .p {
-  color: rgb(229, 203, 238);
+  color: black;
 }
 
 .about-content h2 {
@@ -579,20 +572,22 @@ img {
 
 
 .about-content .read-more {
-    display: inline-block;
-    border: 2px solid black;
-    border-radius: .5rem;
-    padding: .4rem 1rem;
-    font-size: 14px;
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 1.6rem;
-    color: #000;
+  display: inline-block;
+  background: none;
+  border: 2px solid black;
+  border-radius: .5rem;
+  padding: .6rem 1rem;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 1.6rem;
+  color: black;
+  box-shadow: 7px 7px 7px hsla(0, 0%, 4%, 0.2);
 }
 
 .about-content .read-more:hover {
-    background-color: black;
+    background-color: rgb(167, 1, 156);
     color: white;
 }
 
@@ -765,7 +760,7 @@ img {
 /*=============== Contacts ===============*/
 
 .contact {
-  background-color: rgb(253, 222, 181);
+  background-color: white;
 }
 
 .contact__container {
@@ -870,7 +865,7 @@ img {
   top: -.85rem;
   left:1.23rem;
   z-index: 10;
-  background-color: rgb(253, 222, 181);
+  background-color: white;
   color: var(--title-color);
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
