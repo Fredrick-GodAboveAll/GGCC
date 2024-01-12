@@ -196,7 +196,7 @@
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: antiquewhite;
+  background-color: #fff;
   color: var(--text-color);
 }
 
@@ -209,6 +209,28 @@ img {
 /* .about-content h2 {
   text-decoration: underline;
 } */
+
+
+.wave {
+  min-height: 105vh;
+}
+
+.wave:after {
+  content: '';
+  position: absolute;
+  bottom: -2.5rem;
+  width: 100%;
+  height: 100px;
+  background-image: url(/tools/images/wave.svg);
+  background-size: cover;
+  z-index: 7;
+}
+
+
+.bg-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 
 /* heading section  */
@@ -323,6 +345,7 @@ img {
     rgb(59, 1, 55) 89%
   );
   overflow: hidden;
+  padding: 0;
 }
 
 .home .content {
@@ -911,10 +934,14 @@ img {
   color: hsl(207, 56%, 45%);
 }
 
+.footer {
+  background-color: antiquewhite;
+}
 .footer__container {
   /* background-color: var(--first-color);  FORM INCLUDING A MAP */
   padding: 3rem 0 7rem;
   text-align: center;
+  
 }
 
 .footer__title {
