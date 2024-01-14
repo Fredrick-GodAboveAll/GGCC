@@ -103,49 +103,48 @@ let newSwiper = new Swiper(".new-swiper", {
 
 // hi peolple 
 
+
+
 // TIMER 
 
 
-const countDownData = new Date("Dec 31, 2023 00:00:00").getTime();
+// const countDownData = new Date("Dec 31, 2023 00:00:00").getTime();
 
-const days = document.querySelector(".days");
-const hours = document.querySelector(".hours");
-const minutes = document.querySelector(".minutes");
-const seconds = document.querySelector(".seconds");
+// const days = document.querySelector(".days");
+// const hours = document.querySelector(".hours");
+// const minutes = document.querySelector(".minutes");
+// const seconds = document.querySelector(".seconds");
 
-const discountContainer = document.querySelector(".discount-container");
+// const discountContainer = document.querySelector(".discount-container");
 
-const x = setInterval(function () {
-    const now = new Date().getTime();
-    let distance = countDownData - now;
+// const x = setInterval(function () {
+//     const now = new Date().getTime();
+//     let distance = countDownData - now;
 
-    // Handling negative values
-    if (distance < 0) {
-        distance = 0;
-    }
+//     if (distance < 0) {
+//         distance = 0;
+//     }
 
-    let daysValue = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, "0");
-    let hoursValue = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, "0");
-    let minutesValue = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, "0");
-    let secondsValue = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, "0");
+//     let daysValue = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, "0");
+//     let hoursValue = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, "0");
+//     let minutesValue = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, "0");
+//     let secondsValue = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, "0");
 
-    days.innerHTML = daysValue;
-    hours.innerHTML = hoursValue;
-    minutes.innerHTML = minutesValue;
-    seconds.innerHTML = secondsValue;
+//     days.innerHTML = daysValue;
+//     hours.innerHTML = hoursValue;
+//     minutes.innerHTML = minutesValue;
+//     seconds.innerHTML = secondsValue;
 
-    if (distance <= 0) {
-        clearInterval(x);
-        // Check if discountContainer exists before removing it
-        if (discountContainer) {
-            discountContainer.remove();
+//     if (distance <= 0) {
+//         clearInterval(x);
+//         if (discountContainer) {
+//             discountContainer.remove();
 
-            // Add a red blocking dot
-            const dot = document.createElement("div");
-            dot.className = "blocking-dot";
-            dot.style.backgroundColor = "red";
-            discountContainer.appendChild(dot);
-        }
-    }
+//             const dot = document.createElement("div");
+//             dot.className = "blocking-dot";
+//             dot.style.backgroundColor = "red";
+//             discountContainer.appendChild(dot);
+//         }
+//     }
 
-}, 1000);
+// }, 1000);
