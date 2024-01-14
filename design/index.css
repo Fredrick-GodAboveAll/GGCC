@@ -222,9 +222,9 @@ img {
   bottom: -2.5rem;
   width: 100%;
   height: 100px;
-  background-image: url(/tools/images/wave.svg);
+  background-image: url(../tools/images/wave.svg);
   background-size: cover;
-  /* z-index: 7; */
+  z-index: 7;
 }
 
 
