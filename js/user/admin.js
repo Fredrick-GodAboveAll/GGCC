@@ -39,9 +39,52 @@ if (userId) {
                 document.getElementById('check').textContent = Going;
                 const contributions = user.Contributions;
 
+                (function () {
+                    emailjs.init("dal5-mlZ73bYmcqth"); // Replace with your EmailJS User ID
+                })();
+                
+                document.getElementById("send-form").addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    
+                    const params = {
+                        name: Going,
+                        method: document.getElementById("paymentMeth").value,
+                        date: document.getElementById("paymentDate").value,
+                        message: document.getElementById("using").value,
+                    };
+
+                    
+                    emailjs.send("service_9b8a14i", "template_ow136vh", params) // Replace with your Service ID and Template ID
+                        .then(function (res) {
+                            // alert("Email sent successfully! Status: " + res.status);
+                            iziToast.success({
+                                title: 'Great, !',
+                                message: 'Your message was delivered successfully',
+                                position: 'topRight'
+                            });
+                            clearFormFields(); // Call the function to clear form fields
+                        })
+                        .catch(function (error) {
+                            // alert("An error occurred while sending the email: " + error);
+                            iziToast.error({
+                                title: 'Not sent, !',
+                                message: 'Message not sent kindly contact Tresurer to resolve',
+                                position: 'topRight'
+                              });
+                        });
+                });
+                
+                function clearFormFields() {
+                    // Replace these lines with clearing the fields you want
+                    document.getElementById("paymentMeth").value = "";
+                    document.getElementById("paymentDate").value = "";
+                    document.getElementById("using").value = "";
+                }
+
+
                 // Extract months and amounts for contributions
                 const months = contributions.map(contribution => contribution.Month);
-                const amounts = contributions.map(contribution => contribution.Amount);
+                // const amounts = contributions.map(contribution => contribution.Amount);
 
                 let totalAmount = 0;
                 let pledgedAmount = 0;
@@ -191,7 +234,7 @@ document.getElementById("paymentMeth").addEventListener("change", function() {
 function enableTextarea() {
     var select = document.getElementById("paymentMeth");
 
-    var textarea = document.getElementById("Mode");
+    var textarea = document.getElementById("using");
 
     if (select.value === "select") {
         textarea.disabled = true;
@@ -204,33 +247,3 @@ function enableTextarea() {
 // sending the actual payment
 
 
-(function () {
-    emailjs.init("yvgEpr9WavK6KgXh3"); // Replace with your EmailJS User ID
-})();
-
-document.getElementById("send-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    
-    const params = {
-        name: document.getElementById("ll").value,
-        method: document.getElementById("paymentMeth").value,
-        date: document.getElementById("paymentDate").value,
-        message: document.getElementById("Mode").value,
-    };
-
-    emailjs.send("service_nkuhy2y", "template_fexre2d", params) // Replace with your Service ID and Template ID
-        .then(function (res) {
-            alert("Email sent successfully! Status: " + res.status);
-            clearFormFields(); // Call the function to clear form fields
-        })
-        .catch(function (error) {
-            alert("An error occurred while sending the email: " + error);
-        });
-});
-
-function clearFormFields() {
-    // Replace these lines with clearing the fields you want
-    document.getElementById("paymentMeth").value = "";
-    document.getElementById("paymentDate").value = "";
-    document.getElementById("message").value = "";
-}

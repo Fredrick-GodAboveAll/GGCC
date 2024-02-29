@@ -9,6 +9,7 @@
   <title>fredrick admin</title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="assets/css/app.min.css">
+  <link rel="stylesheet" href="assets/bundles/izitoast/css/iziToast.min.css">
   <!-- Template CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/components.css">
@@ -442,9 +443,9 @@
                         <label>Choose One</label>
                         <select class="custom-select" id="paymentMeth" required onchange="enableTextarea()">
                           <option value="" selected >select an option of giving</option>
-                          <option value="1">Pledge</option>
-                          <option value="2">Cash</option>
-                          <option value="3">Bank</option>
+                          <option value="Pledge">Pledge</option>
+                          <option value="Cash">Cash</option>
+                          <option value="Bank">Bank</option>
                         </select>
                       </div>
 
@@ -455,7 +456,8 @@
 
                       <div class="section-title">Message or Amount</div>
                       <div class="form-group">
-                        <textarea name="message" disabled class="form-control" id="Mode" required></textarea>
+                        <label for="Mode"></label>
+                        <textarea title="message" name="message" disabled class="form-control" id="using" required></textarea>
                       </div>
 
                       <div class="card-footer text-right">
@@ -613,6 +615,9 @@
 
   <!-- JS Libraies -->
   <script src="assets/bundles/apexcharts/apexcharts.min.js"></script>
+
+  <!-- JS Libraies -->
+  <script src="assets/bundles/izitoast/js/iziToast.min.js"></script>
 
   <!-- for email message sending  -->
   <script src="tools/@emailjs/browser/dist/email.min.js"></script>
