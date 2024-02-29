@@ -1,0 +1,22 @@
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3VzdG9tLmNzcyIsInNvdXJjZXMiOlsiY3VzdG9tLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiJ9 */
+
+/*# sourceMappingURL=custom.css.map */
+
+
+.table-responsive {
+    height: 400px;
+    /* background-color: red; */
+}
+
+/* .nice {
+    position: sticky;
+} */
+
+#ll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: -1rem;
+}

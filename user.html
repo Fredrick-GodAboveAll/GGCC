@@ -1,219 +1,633 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CHART JS</title>
 
-        <link rel="stylesheet" href="tools/fontawesome/css/all.min.css">
-        <link rel="stylesheet" href="tools/fontawesome/css/fontawesome.min.css">
+<!-- index.html  21 Nov 2019 03:44:50 GMT -->
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>fredrick admin</title>
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="assets/css/app.min.css">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <!-- Custom style CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
 
-        <link rel="stylesheet" href="design/user.css">
-
-    </head>
-
-    <body>
-
-        <div class="container">
-            
-            <div class="topbar">
-
-                <div class="logo">
-                    <h2 id="name-container">GG<span>CC</span></h2>
+<body>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar sticky">
+        <div class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+									collapse-btn"> <i data-feather="align-justify"></i></a></li>
+            <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                <i data-feather="maximize"></i>
+              </a></li>
+            <li>
+              <form class="form-inline mr-auto">
+                <div class="search-element">
+                  <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="200">
+                  <button class="btn" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
                 </div>
-
-                <div class="search">
-                    <input type="text" id="search" placeholder="search here">
-                    <label for="search"> <i class="fas fa-search"></i></label>
-                </div>
-
-                <button type="button" class="icon-button" onclick="toggleMenu()">
-
-                    <span class="fas fa-bell"></span>
-                    <span class="icon-button__badge">1</span>
-
-                </button>
-
-                <div class="sub-menu-wrap" id="subMenu">
-
-                    <div class="sub-menu">
-                        <div class="user-info">
-                            <i class="far fa-user"></i>
-                            <h4 id="userName"></h4>
-                        </div>
-
-                        <hr/>
-        
-                        <a href="#" class="sub-menu-link">
-                            <i class="far fa-flag"></i>
-                            <p class="issue">Report</p> <!--conflict reslution button-->
-                        </a>
-        
-                        <a href="#" class="sub-menu-link">
-                            <i class="fas fa-arrow-right-from-bracket"></i>
-                            <p>Log out</p>
-                        </a>
-        
-                    </div>
-        
-                </div>
-
-                <!-- <img src="img/user.jpg" alt="profile"> -->
-                
-
-            </div>
-
-
-            <div class="main">
-
-                <div class="cards">
-
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="number" id="AllContributions"></div>
-                            <div class="card-name">Total</div>
-                        </div>
-                        
-                        <div class="icon-box">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="number" id="PledgeAmountNotHonored"></div>
-                            <div class="card-name">PLEDGES PENDING</div>
-                        </div>
-                        <div class="icon-box">
-                            <i class="fas fa-money-bill-transfer"></i>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="number">7,674</div>
-                            <div class="card-name">Expense & Tcosts</div>
-                        </div>
-                        <div class="icon-box">
-                            <i class="fas fa-toolbox"></i>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="number">18,576</div>
-                            <div class="card-name">Bank Total</div>
-                        </div>
-
-                        <div class="icon-box">
-                            <i class="fas fa-building-columns"></i>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="chartCard">
-
-                    <div class="chartBox">
-
-                        <canvas id="myChart"></canvas>
-                        <button id="pledgesButton" class="btn-pledge">Your Pledges</button>
-                        <!-- <button id="ALLtotal">ALL OF IT</button> -->
-
-                    </div>
-
-                </div>
-
-                <div class="wrapper">
-                    <div class="ta" id="tg">
-                        <table>
-                            <caption>Table</caption>
-                            <thead>
-                                <tr>
-                                    <th>MONTHS</th>
-                                    <th>AMOUNT</th>
-                                    <th>PLEDGE</th>
-                                    <th>MODE</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Rows will be added here dynamically -->
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="contain">
-
-                    <div class="box">
-                        <form action="" class="form " id="send-form">
-
-                            <h1 class="form__title" id="user-name"></h1>
-            
-                            <div class="form__message form__message--success"></div>
-                            <div class="form__message form__message--error"></div>
-
-                            <div class="form__input-group">
-                                <label for="name" class="label">Enter your name</label>
-                                <input type="text" id="name" name="name" class="form__input" autofocus placeholder="name" required>
-                                <div class="form__input-error-message"></div>
-                            </div>
-                            
-                            <div class="form__input-group">
-                                <label for="paymentMeth" class="label">select an option</label>
-                                <select id="paymentMeth" name="paymentMethod" required onchange="enableTextarea()" class="form__input select" autofocus placeholder="Username" >
-        
-                                    <option value="" selected>select</option>
-                                    <option value="Pledge">Pledge</option>
-                                    <option value="Bank">Bank</option>
-                                    <option value="Mpesa">Mpesa</option>
-                                    <option value="Cash">Cash</option>
-
-                                </select>
-
-                                <div class="form__input-error-message"></div>
-                            </div>
-            
-                            <div class="form__input-group">
-                                <label for="mySelect" class="label">select a Date</label>
-                                <input type="date" id="paymentDate" name="paymentDate" class="form__input" autofocus placeholder="Date" required>
-                                <div class="form__input-error-message"></div>
-                            </div>
-            
-                            <div class="form__input-group">
-                                <label for="mySelect" class="label">Transaction Message</label>
-                                <textarea name="message" id="message" disabled class="form__input" autofocus placeholder="message" required></textarea>
-                                <div class="form__input-error-message"></div>
-                            </div>
-                            
-                            <button class="form__button" type="submit">submit</button>
-                            
-            
-                            <p class="form__text">
-                                <a href="#" class="form__link" id="forgotPasswordLink">Much appreciations</a>
-                            </p> 
-                            <p class="form__text">
-                                <a href="#" id="linkCreateAccount"  class="form__link">Thanks for your commitment. God bless you</a>
-                            </p>
-            
-                        </form>
-                    </div>
-                </div>
-                
-            </div>
-
+              </form>
+            </li>
+          </ul>
         </div>
-        
-        <script src="tools/distChartjs/chart.umd.js"></script>
-        <script src="tools/@emailjs/browser/dist/email.min.js"></script>
-        <!-- <script src="js/using/chart.js"></script> -->
-        <script src="js/using/display.js"></script>
-        <script src="js/using/forbell.js"></script>
+        <ul class="navbar-nav navbar-right">
 
-    </body>
-    
+          <!-- FOR THE ENVELOPE  -->
+          
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
+              class="nav-link nav-link-lg message-toggle"><i data-feather="mail"></i>
+              <span class="badge headerBadge1" style="background-color: rgb(186, 255, 149); color: black;">
+                1 </span> </a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+              <div class="dropdown-header">
+                Messages
+                <div class="float-right">
+                  <a href="#">Chat mode arriving soon</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-message">
+                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="assets/img/users/user-4.png" class="rounded-circle">
+                  </span> <span class="dropdown-item-desc"> <span class="message-user">Welcome
+                    </span> <span class="time messege-text">hii <span id="envelope"></span>, explore the new
+                      self service and report portal
+                      related to mens fellowship.</span> <span class="time">Now</span>
+                  </span>
+                </a> 
+                
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+
+          <!-- FOR THE BELL  -->
+
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
+              class="nav-link notification-toggle nav-link-lg"><i data-feather="bell" class="bell"></i>
+            </a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+              <div class="dropdown-header">
+                Notifications
+                <div class="float-right">
+                  <a href="#">Reminders arrives soon</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="#" class="dropdown-item dropdown-item-unread"> <span
+                    class="dropdown-item-icon bg-white text-white" style="border: 1px solid black;"> <i class="fas
+												fa-gift" style="color: rgb(219, 6, 166);"></i>
+                  </span> <span class="dropdown-item-desc"> System update
+                    available now!  <span class="time">
+                      Now</span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-info text-white"> <i class="fas
+												fa-bible"></i>
+                  </span> <span class="dropdown-item-desc"> <b>Let</b> us <b>praise
+                      God</b> and commit to our fellowship <span class="time">Now
+                      </span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-success text-white"> <i
+                      class="fas
+												fa-check"></i>
+                  </span> <span class="dropdown-item-desc"> <span id="check"></span> logged
+                    in successfully <span class="time">
+                      Now
+                      </span>
+                  </span>
+                </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-warning text-white"> <i
+                      class="fas fa-exclamation-triangle"></i>
+                  </span> <span class="dropdown-item-desc"> If you need help kindly ask or if anything is not working well report. Let's protect
+                    the system! <span class="time">Now</span>
+                  </span>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown"
+              class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="assets/img/user.png"
+                class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
+            <div class="dropdown-menu dropdown-menu-right pullDown">
+              <div class="dropdown-title">Hello <span id="userName"></span></div>
+              <a href="profile.html" class="dropdown-item has-icon"> <i class="far
+										fa-user"></i> Profile
+              </a> <a href="timeline.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i>
+                Activities
+              </a> <a href="#" class="dropdown-item has-icon"> <i class="fas fa-cog"></i>
+                Settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="index.html" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="index.html"> <i data-feather="user"></i> <span
+                class="logo-name">GGCC</span>
+            </a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="menu-header">Main</li>
+            <li class="dropdown active">
+              <a href="index.html" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
+            </li>
+            
+            <li class="menu-header">Other Options</li>
+            
+            <li><a class="nav-link" href="#"><i data-feather="key"></i><span>NEW ITEM SOON</span></a></li>
+            <li class="menu-header">Other options coming soon</li>
+          </ul>
+        </aside>
+      </div>
+
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="row ">
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+              <div class="card">
+                <div class="card-statistic-4">
+                  <div class="align-items-center justify-content-between">
+                    <div class="row ">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                        <div class="card-content">
+                          <h5 class="font-15">Total</h5>
+                          <h2 class="mb-3 font-18" id="AllContributions"></h2>
+                          <p class="mb-0"><span class="col-green">10%</span> Increase</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                        <div class="banner-img">
+                          <img src="assets\img\banner\total.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+              <div class="card">
+                <div class="card-statistic-4">
+                  <div class="align-items-center justify-content-between">
+                    <div class="row ">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                        <div class="card-content">
+                          <h5 class="font-15"> Transaction</h5>
+                          <h2 class="mb-3 font-18">1,287</h2>
+                          <p class="mb-0"><span class="col-orange">09%</span> Decrease</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                        <div class="banner-img">
+                          <img src="assets/img/banner/2.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+              <div class="card">
+                <div class="card-statistic-4">
+                  <div class="align-items-center justify-content-between">
+                    <div class="row ">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                        <div class="card-content">
+                          <h5 class="font-15">Expenses</h5>
+                          <h2 class="mb-3 font-18">128</h2>
+                          <p class="mb-0"><span class="col-green">18%</span>
+                            Increase</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                        <div class="banner-img">
+                          <img src="assets/img/banner/3.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              
+              <div class="card">
+                <div class="card-statistic-4">
+                  <div class="align-items-center justify-content-between">
+                    <div class="row ">
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                        <div class="card-content">
+                          <h5 class="font-15">Bank Bal</h5>
+                          <h2 class="mb-3 font-18">$48,697</h2>
+                          <p class="mb-0"><span class="col-green">42%</span> Increase</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                        <div class="banner-img">
+                          <img src="assets/img/banner/4.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-sm-12 col-lg-12">
+              <div class="card ">
+                <div class="card-header">
+                  <h4>Your Chart</h4>
+                  <div class="card-header-action">
+                    <div class="dropdown">
+                      <a href="#" data-toggle="dropdown" class="btn btn-warning dropdown-toggle">Options</a>
+                      <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item has-icon"><i class="fas fa-info-circle"></i> nov-feb</a>
+                        <a href="#" class="dropdown-item has-icon"><i class="fas fa-info-circle"></i> mar-june</a>
+                        <a href="#" class="dropdown-item has-icon"><i class="fas fa-info-circle"></i> july-dec</a>
+                        <a href="#" class="dropdown-item has-icon"><i class="fas fa-info-circle"></i> Jan-Apr</a>
+                        <a href="#" class="dropdown-item has-icon"><i class="fas fa-info-circle"></i> June-Sep</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item has-icon text-danger"><i class="far fa-trash-alt"></i>
+                          report</a>
+                      </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">View All</a>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-lg-9">
+                      <div id="chart1"></div>
+                      <div class="row mb-0">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                          <div class="list-inline text-center">
+                            <div class="list-inline-item p-r-30"><i data-feather="arrow-up-circle"
+                                class="col-green"></i>
+                              <h5 class="m-b-0">$675</h5>
+                              <p class="text-muted font-14 m-b-0">Weekly Earnings</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                          <div class="list-inline text-center">
+                            <div class="list-inline-item p-r-30"><i data-feather="arrow-down-circle"
+                                class="col-orange"></i>
+                              <h5 class="m-b-0">$1,587</h5>
+                              <p class="text-muted font-14 m-b-0">Monthly Earnings</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                          <div class="list-inline text-center">
+                            <div class="list-inline-item p-r-30"><i data-feather="arrow-up-circle"
+                                class="col-green"></i>
+                              <h5 class="mb-0 m-b-0">$45,965</h5>
+                              <p class="text-muted font-14 m-b-0">Yearly Earnings</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="row mt-5">
+                        <div class="col-7 col-xl-7 mb-3">Pledges pending</div>
+                        <div class="col-5 col-xl-5 mb-3">
+                          <span class="text-big" id="PledgeAmountNotHonored"> </span>
+                          <sup class="col-green">+09%</sup>
+                        </div>
+                        <div class="col-7 col-xl-7 mb-3">Amount not deposited</div>
+                        <div class="col-5 col-xl-5 mb-3">
+                          <span class="text-big">$9,857</span>
+                          <sup class="text-danger">-18%</sup>
+                        </div>
+                        <div class="col-7 col-xl-7 mb-3">Meettings Attendance</div>
+                        <div class="col-5 col-xl-5 mb-3">
+                          <span class="text-big">$6,287</span>
+                          <sup class="col-green">+09%</sup>
+                        </div>
+                        <div class="col-7 col-xl-7 mb-3">project in progress</div>
+                        <div class="col-5 col-xl-5 mb-3">
+                          <span class="text-big">684</span>
+                          <sup class="col-green">+22%</sup>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-sm-12 col-lg-4">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Annual chart</h4>
+                </div>
+                <div class="card-body">
+                  <div id="chart4" class="chartsh"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-lg-4">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Transaction costs rate</h4>
+                </div>
+                <div class="card-body">
+                  <div id="chart2" class="chartsh"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Activity Table</h4>
+                  <div class="card-header-form">
+                    <form>
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <div class="input-group-btn">
+                          <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <div class="table-responsive">
+                    <table class="table table-striped">
+                      <tr class="nice">
+                        <th class="text-center">
+                          <div class="custom-checkbox custom-checkbox-table custom-control">
+                            <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad"
+                              class="custom-control-input" id="checkbox-all">
+                            <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
+                          </div>
+                        </th>
+                        <th>Month</th>
+                        <th>Members</th>
+                        <th>Rate</th>
+                        <th>Amount</th>
+                        <th>Pledges</th>
+                        <th>Expenses</th>
+                        <th>Actions</th>
+                      </tr>
+                      <tbody class="tii" id="tii">
+                        <!-- to be filled by javascript  -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-12 col-xl-6">
+              <!-- Support tickets -->
+              <div class="card">
+                <div class="card-header">
+                  <h4>Monthly Giving</h4>
+                  <form class="card-header-form">
+                    <input type="text" name="search" class="form-control" placeholder="Search">
+                  </form>
+                </div>
+                <div class="card-body">
+
+                  <form action="" id="send-form">
+
+                    <div class="section-title"><h4 id="ll"></h4></div>
+
+                      <div class="section-title mt-0">Select</div>
+                      <div class="form-group">
+                        <label>Choose One</label>
+                        <select class="custom-select" id="paymentMeth" required onchange="enableTextarea()">
+                          <option value="" selected >select an option of giving</option>
+                          <option value="1">Pledge</option>
+                          <option value="2">Cash</option>
+                          <option value="3">Bank</option>
+                        </select>
+                      </div>
+
+                      <div class="section-title">Datetime Local</div>
+                        <div class="form-group">
+                        <input type="datetime-local" required class="form-control" id="paymentDate" name="paymentDate">
+                      </div>
+
+                      <div class="section-title">Message or Amount</div>
+                      <div class="form-group">
+                        <textarea name="message" disabled class="form-control" id="Mode" required></textarea>
+                      </div>
+
+                      <div class="card-footer text-right">
+                        <button class="btn btn-primary mr-1" type="submit">Submit</button>
+                      </div>
+
+                    </div>
+
+                  </form>
+
+                  
+                <a href="javascript:void(0)" class="card-footer card-link text-center small ">View
+                  All</a>
+              </div>
+              <!-- Support tickets -->
+            </div>
+            <div class="col-md-6 col-lg-12 col-xl-6 closed_accounts">
+              
+              <div class="card">
+                <div class="card-header">
+                  <h4>Closed Accounts</h4>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Name</th>
+                          <th>Date closed</th>
+                          <th>from month</th>
+                          <th>Pledge Amount</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          
+                          <!-- to be filled with js  -->
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+        <div class="settingSidebar">
+          <a href="javascript:void(0)" class="settingPanelToggle"> <i class="fa fa-spin fa-cog"></i>
+          </a>
+          <div class="settingSidebar-body ps-container ps-theme-default">
+            <div class=" fade show active">
+              <div class="setting-panel-header">Setting Panel
+              </div>
+              <div class="p-15 border-bottom">
+                <h6 class="font-medium m-b-10">Select Layout</h6>
+                <div class="selectgroup layout-color w-50">
+                  <label class="selectgroup-item">
+                    <input type="radio" name="value" value="1" class="selectgroup-input-radio select-layout" checked>
+                    <span class="selectgroup-button">Light</span>
+                  </label>
+                  <label class="selectgroup-item">
+                    <input type="radio" name="value" value="2" class="selectgroup-input-radio select-layout">
+                    <span class="selectgroup-button">Dark</span>
+                  </label>
+                </div>
+              </div>
+              <div class="p-15 border-bottom">
+                <h6 class="font-medium m-b-10">Sidebar Color</h6>
+                <div class="selectgroup selectgroup-pills sidebar-color">
+                  <label class="selectgroup-item">
+                    <input type="radio" name="icon-input" value="1" class="selectgroup-input select-sidebar">
+                    <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
+                      data-original-title="Light Sidebar"><i class="fas fa-sun"></i></span>
+                  </label>
+                  <label class="selectgroup-item">
+                    <input type="radio" name="icon-input" value="2" class="selectgroup-input select-sidebar" checked>
+                    <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
+                      data-original-title="Dark Sidebar"><i class="fas fa-moon"></i></span>
+                  </label>
+                </div>
+              </div>
+              <div class="p-15 border-bottom">
+                <h6 class="font-medium m-b-10">Color Theme</h6>
+                <div class="theme-setting-options">
+                  <ul class="choose-theme list-unstyled mb-0">
+                    <li title="white" class="active">
+                      <div class="white"></div>
+                    </li>
+                    <li title="cyan">
+                      <div class="cyan"></div>
+                    </li>
+                    <li title="black">
+                      <div class="black"></div>
+                    </li>
+                    <li title="purple">
+                      <div class="purple"></div>
+                    </li>
+                    <li title="orange">
+                      <div class="orange"></div>
+                    </li>
+                    <li title="green">
+                      <div class="green"></div>
+                    </li>
+                    <li title="red">
+                      <div class="red"></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="p-15 border-bottom">
+                <div class="theme-setting-options">
+                  <label class="m-b-0">
+                    <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                      id="mini_sidebar_setting">
+                    <span class="custom-switch-indicator"></span>
+                    <span class="control-label p-l-10">Mini Sidebar</span>
+                  </label>
+                </div>
+              </div>
+              <div class="p-15 border-bottom">
+                <div class="theme-setting-options">
+                  <label class="m-b-0">
+                    <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                      id="sticky_header_setting">
+                    <span class="custom-switch-indicator"></span>
+                    <span class="control-label p-l-10">Sticky Header</span>
+                  </label>
+                </div>
+              </div>
+              <div class="mt-4 mb-4 p-3 align-center rt-sidebar-last-ele">
+                <a href="#" class="btn btn-icon icon-left btn-primary btn-restore-theme">
+                  <i class="fas fa-undo"></i> Restore Default
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="main-footer">
+        <div class="footer-left">
+          <a href="templateshub.net">GGCC</a></a>
+        </div>
+        <div class="footer-right">
+        </div>
+      </footer>33081140 faith muasya
+    </div>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="assets/js/app.min.js"></script>
+
+  <!-- JS Libraies -->
+  <script src="assets/bundles/apexcharts/apexcharts.min.js"></script>
+
+  <!-- for email message sending  -->
+  <script src="tools/@emailjs/browser/dist/email.min.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="assets/js/page/user.js"></script>
+
+  <!-- Template JS File -->
+  <script src="assets/js/scripts.js"></script>
+
+  <!-- Custom JS File -->
+  <script src="js/user/admin.js"></script>
+
+</body>
+
+
+<!-- index.html  21 Nov 2019 03:47:04 GMT -->
 </html>
-
-
-

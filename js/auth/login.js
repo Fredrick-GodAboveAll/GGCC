@@ -21,14 +21,14 @@ async function fetchData() {
 // Function to handle the login logic
 async function handleLogin() {
     const nameInput = document.getElementById('me').value;
-    const IdInput = document.getElementById('Id').value;
+    // const IdInput = document.getElementById('Id').value;
     
     const data = await fetchData();
-    const match = data.find(person => person.Name === nameInput && person.Id == IdInput);
-    
+    const match = data.find(person => person.Name === nameInput);
+    // && person.Id == IdInput
 
     if (match) {
-        const userId = match.Id;
+        const userId = match.Name;
         // console.log(userId);
 
         // future use 
