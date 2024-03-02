@@ -28,16 +28,12 @@ async function handleLogin() {
     // && person.Id == IdInput
 
     if (match) {
-        const userId = match.Name;
-        // console.log(userId);
+        const parKovComaaadhere = match.Name;
 
         // future use 
         // alert('Login successful!');
         
-        swal('Good Job', 'logged in!', 'success');
-        
-        window.location.href = `user.html?.=${userId}`;
-    
+        window.location.href = `user.html?parKComaaad/s=${parKovComaaadhere}`;
     } else {
         // alert('User does not exist.');
         swal('oops!', 'Incorrect Username or Password Please Try Again!', 'error');

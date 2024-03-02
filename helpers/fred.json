@@ -2,6 +2,7 @@
     {
         "Id": "40Pst8",
         "Name": "Pastor Dan",
+        "VId": "pastor@Dan",
         "Contributions": [
             { "Month": "nov", "Amount": 400, "Pledge": 0, "Mode": "m" },
             { "Month": "dec", "Amount": 1000, "Pledge": 0, "Mode": "m" },
@@ -26,6 +27,7 @@
     {
         "Id": "90562",
         "Name": "Chairman",
+        "VId": "Chairm@ann",
         "Contributions": [
             {"Month": "nov", "Amount": 1000, "Pledge": 0, "Mode": "m" },
             {"Month": "dec", "Amount": 1000, "Pledge": 0, "Mode": "m" },
@@ -50,6 +52,7 @@
     {
         "Id": "6565",
         "Name": "Benard",
+        "VId": "Ben!nard",
         "Contributions": [
             { "Month": "nov", "Amount": 100, "Pledge": 0, "Mode": "m" },
             { "Month": "dec", "Amount": 0, "Pledge": 0, "Mode": "m" },
@@ -74,6 +77,7 @@
     {
         "Id": "73M20",
         "Name": "Moses",
+        "VId": "mose&ss",
         "Contributions": [
             { "Month": "nov", "Amount": 0, "Pledge": 0, "Mode": "m" },
             { "Month": "dec", "Amount": 500, "Pledge": 0, "Mode": "m" },
@@ -97,6 +101,7 @@
     {
         "Id": "45P869",
         "Name": "Paul",
+        "VId": "P#aul",
         "Contributions": [
             { "Month": "nov", "Amount": 0, "Pledge": 0, "Mode": "m" },
             { "Month": "dec", "Amount": 0, "Pledge": 0, "Mode": "m" },
@@ -120,6 +125,7 @@
     {
         "Id": "97S7M",
         "Name": "Steve",
+        "VId": "St%eve",
         "Contributions": [
             { "Month": "nov", "Amount": 0, "Pledge": 0, "Mode": "m" },
             { "Month": "dec", "Amount": 0, "Pledge": 0, "Mode": "m" },
@@ -143,6 +149,7 @@
     {
         "Id": "33E1",
         "Name": "Emmanuel",
+        "VId": "emma7nuel",
         "Contributions": [
             { "Month": "nov", "Amount": 100, "Pledge": 0, "Mode": "m" },
             { "Month": "dec", "Amount": 0, "Pledge": 0, "Mode": "m" },
@@ -166,6 +173,7 @@
     {
         "Id": "6565",
         "Name": "Munyao",
+        "VId": "munyao@",
         "Contributions": [
             { "Month": "nov", "Amount": 0, "Pledge": 100, "Mode": "m" },
             { "Month": "dec", "Amount": 0, "Pledge": 0, "Mode": "m" },
@@ -189,6 +197,7 @@
     {
         "Id": "0145A",
         "Name": "Daud",
+        "VId": "da!ud",
         "Contributions": [
             { "Month": "nov", "Amount": 100, "Pledge": 0, "Mode": "m" },
             { "Month": "dec", "Amount": 100, "Pledge": 0, "Mode": "m" },
@@ -212,6 +221,7 @@
     {
         "Id": "6565",
         "Name": "Boniface",
+        "VId": "boni/face",
         "Contributions": [
             { "Month": "nov", "Amount": 100, "Pledge": 0, "Mode": "m" },
             { "Month": "dec", "Amount": 100, "Pledge": 0, "Mode": "m" },
@@ -235,6 +245,7 @@
     {
         "Id": "6565",
         "Name": "Daniel",
+        "VId": "dan:iel",
         "Contributions": [
             { "Month": "nov", "Amount": 100, "Pledge": 0, "Mode": "m" },
             { "Month": "dec", "Amount": 100, "Pledge": 0, "Mode": "m" },
@@ -258,6 +269,7 @@
     {
         "Id": "6565",
         "Name": "Benson",
+        "VId": "ben@son",
         "Contributions": [
             { "Month": "nov", "Amount": 100, "Pledge": 0, "Mode": "m" },
             { "Month": "dec", "Amount": 100, "Pledge": 0, "Mode": "m" },
@@ -281,6 +293,7 @@
     {
         "Id": "4198",
         "Name": "Fredrick",
+        "VId": "fred@GGCC",
         "Contributions": [
             { "Month": "nov", "Amount": 0, "Pledge": 0, "Mode": "m" },
             { "Month": "dec", "Amount": 0, "Pledge": 0, "Mode": "m" },

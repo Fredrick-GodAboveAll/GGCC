@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>fredrick admin</title>
+  <title>GGCC admin</title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="assets/css/app.min.css">
   <link rel="stylesheet" href="assets/bundles/izitoast/css/iziToast.min.css">
@@ -124,15 +124,15 @@
                 class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
             <div class="dropdown-menu dropdown-menu-right pullDown">
               <div class="dropdown-title">Hello <span id="userName"></span></div>
-              <a href="profile.html" class="dropdown-item has-icon"> <i class="far
+              <a href="#" class="dropdown-item has-icon"> <i class="far
 										fa-user"></i> Profile
-              </a> <a href="timeline.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i>
+              </a> <a href="#" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i>
                 Activities
               </a> <a href="#" class="dropdown-item has-icon"> <i class="fas fa-cog"></i>
                 Settings
               </a>
               <div class="dropdown-divider"></div>
-              <a href="index.html" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
+              <a href="#" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
                 Logout
               </a>
             </div>
@@ -201,7 +201,7 @@
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
                           <h5 class="font-15"> Transaction</h5>
-                          <h2 class="mb-3 font-18">1,287</h2>
+                          <h2 class="mb-3 font-18" id="PledgeAmountNotHonored"></h2>
                           <p class="mb-0"><span class="col-orange">09%</span> Decrease</p>
                         </div>
                       </div>
@@ -271,111 +271,44 @@
           </div>
 
           <div class="row">
-            <div class="col-12 col-sm-12 col-lg-12">
-              <div class="card ">
-                <div class="card-header">
-                  <h4>Your Chart</h4>
-                  <div class="card-header-action">
-                    <div class="dropdown">
-                      <a href="#" data-toggle="dropdown" class="btn btn-warning dropdown-toggle">Options</a>
-                      <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item has-icon"><i class="fas fa-info-circle"></i> nov-feb</a>
-                        <a href="#" class="dropdown-item has-icon"><i class="fas fa-info-circle"></i> mar-june</a>
-                        <a href="#" class="dropdown-item has-icon"><i class="fas fa-info-circle"></i> july-dec</a>
-                        <a href="#" class="dropdown-item has-icon"><i class="fas fa-info-circle"></i> Jan-Apr</a>
-                        <a href="#" class="dropdown-item has-icon"><i class="fas fa-info-circle"></i> June-Sep</a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item has-icon text-danger"><i class="far fa-trash-alt"></i>
-                          report</a>
-                      </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Own Table</h4>
+                        <div class="card-header-form">
+                            <form>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <a href="#" class="btn btn-primary">View All</a>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-lg-9">
-                      <div id="chart1"></div>
-                      <div class="row mb-0">
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                          <div class="list-inline text-center">
-                            <div class="list-inline-item p-r-30"><i data-feather="arrow-up-circle"
-                                class="col-green"></i>
-                              <h5 class="m-b-0">$675</h5>
-                              <p class="text-muted font-14 m-b-0">Weekly Earnings</p>
-                            </div>
-                          </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <tr class="nice">
+                                    <th class="text-center">
+                                        <div class="custom-checkbox custom-checkbox-table custom-control">
+                                            <input type="checkbox" data-checkboxes="myown" data-checkbox-role="dad"
+                                                class="custom-control-input">
+                                            <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
+                                        </div>
+                                    </th>
+                                    <th>Month</th>
+                                    <th>Amount</th>
+                                    <th>Pledge</th>
+                                    <th>Action</th>
+                                </tr>
+                                <tbody class="what" id="what">
+                                    <!-- to be filled by JavaScript -->
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                          <div class="list-inline text-center">
-                            <div class="list-inline-item p-r-30"><i data-feather="arrow-down-circle"
-                                class="col-orange"></i>
-                              <h5 class="m-b-0">$1,587</h5>
-                              <p class="text-muted font-14 m-b-0">Monthly Earnings</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                          <div class="list-inline text-center">
-                            <div class="list-inline-item p-r-30"><i data-feather="arrow-up-circle"
-                                class="col-green"></i>
-                              <h5 class="mb-0 m-b-0">$45,965</h5>
-                              <p class="text-muted font-14 m-b-0">Yearly Earnings</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
-                    <div class="col-lg-3">
-                      <div class="row mt-5">
-                        <div class="col-7 col-xl-7 mb-3">Pledges pending</div>
-                        <div class="col-5 col-xl-5 mb-3">
-                          <span class="text-big" id="PledgeAmountNotHonored"> </span>
-                          <sup class="col-green">+09%</sup>
-                        </div>
-                        <div class="col-7 col-xl-7 mb-3">Amount not deposited</div>
-                        <div class="col-5 col-xl-5 mb-3">
-                          <span class="text-big">$9,857</span>
-                          <sup class="text-danger">-18%</sup>
-                        </div>
-                        <div class="col-7 col-xl-7 mb-3">Meettings Attendance</div>
-                        <div class="col-5 col-xl-5 mb-3">
-                          <span class="text-big">$6,287</span>
-                          <sup class="col-green">+09%</sup>
-                        </div>
-                        <div class="col-7 col-xl-7 mb-3">project in progress</div>
-                        <div class="col-5 col-xl-5 mb-3">
-                          <span class="text-big">684</span>
-                          <sup class="col-green">+22%</sup>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-12 col-sm-12 col-lg-4">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Annual chart</h4>
-                </div>
-                <div class="card-body">
-                  <div id="chart4" class="chartsh"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-12 col-lg-4">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Transaction costs rate</h4>
-                </div>
-                <div class="card-body">
-                  <div id="chart2" class="chartsh"></div>
-                </div>
-              </div>
             </div>
           </div>
           <div class="row">
@@ -496,7 +429,7 @@
                         <tr>
                           
                           <!-- to be filled with js  -->
-                        
+                        </tr>
                       </tbody>
                     </table>
                   </div>
@@ -614,16 +547,11 @@
   <script src="assets/js/app.min.js"></script>
 
   <!-- JS Libraies -->
-  <script src="assets/bundles/apexcharts/apexcharts.min.js"></script>
-
-  <!-- JS Libraies -->
   <script src="assets/bundles/izitoast/js/iziToast.min.js"></script>
 
   <!-- for email message sending  -->
   <script src="tools/@emailjs/browser/dist/email.min.js"></script>
 
-  <!-- Page Specific JS File -->
-  <script src="assets/js/page/user.js"></script>
 
   <!-- Template JS File -->
   <script src="assets/js/scripts.js"></script>

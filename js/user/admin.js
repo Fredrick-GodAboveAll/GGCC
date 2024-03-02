@@ -1,11 +1,13 @@
 // Set user ID in localStorage
 const urlParams = new URLSearchParams(window.location.search);
-const userId = urlParams.get('.');
+const parKovComaaadhere = urlParams.get('parKComaaad/s');
+
+const ConLudaMeisMov = parKovComaaadhere;
 
 let data; // Declare data at a higher scope
 
 // Function to fetch user data based on userId
-async function fetchUserData(userId) {
+async function fetchUserData(ConLudaMeisMov) {
     try {
         const response = await fetch('helpers/fred.json');
 
@@ -16,7 +18,7 @@ async function fetchUserData(userId) {
         data = await response.json(); // Assign data here
 
         // Find user by ID
-        const user = data.find(person => person.Name == userId);
+        const user = data.find(person => person.Name == ConLudaMeisMov);
         return user;
 
     } catch (error) {
@@ -26,9 +28,9 @@ async function fetchUserData(userId) {
 }
 
 
-if (userId) {
+if (ConLudaMeisMov) {
     // If userId is present, fetch user data and populate the page
-    fetchUserData(userId)
+    fetchUserData(ConLudaMeisMov)
         .then(user => {
             if (user) {
                 // Populate user data
@@ -110,6 +112,38 @@ if (userId) {
                 const tbody = document.getElementById('tii');
                 let rowsHTML = '';
 
+                
+                // Assuming contributions array is available here
+                const tbi = document.getElementById('what');
+                let taktak = '';
+
+
+
+                contributions.forEach((contribution, num) => {
+                    const checkboxWM = `checkbox_${num}`;
+                    
+                    taktak += `
+                        <tr>
+                            <td class="p-0 text-center">
+                                <div class="custom-checkbox custom-control">
+                                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="${checkboxWM}">
+                                    <label for="${checkboxWM}" class="custom-control-label">&nbsp;</label>
+                                </div>
+                            </td>
+                            <td>${contribution.Month}</td>
+                            <td>${contribution.Amount}</td>
+                            <td>${contribution.Pledge}</td>
+                            <td><a href="#" class="btn btn-outline-primary">Detail</a></td>
+                        </tr>
+                    `;
+                });
+
+                // Append taktak to the table body
+                tbi.innerHTML = taktak;
+
+
+                
+
                 months.forEach((month, index) => {
                     let totalContribution = 0;
                     let totalPledge = 0;
@@ -185,21 +219,47 @@ if (userId) {
                 const closedAccountsContainer = document.querySelector('.closed_accounts .table tbody');
 
                 writtenOffAccounts.forEach((account, index) => {
-                    // Create a new table row
+                    // Create a new table row for each person
                     const newRow = document.createElement('tr');
-                
-                    // Add data to the table row
+
+                    // Add data to the main table row
                     newRow.innerHTML = `
                         <td>${index + 1}</td>
                         <td>${account.Name}</td>
-                        <td>31-12-2023</td>
-                        <td>hi</td>
-                        <td>${account.PledgeAmount}</td>
+                        <td>31/12/2023</td>
+                        
                     `;
-                
-                    // Append the new row to the table body
+                    
+                    // Append the main table row to the table body
                     closedAccountsContainer.appendChild(newRow);
+
+                    // Create an object to store the months affected by the pledge for the current person
+                    const pledgedMonths = {};
+
+                    // Iterate through the contributions of the current person
+                    account.Contributions.forEach(contribution => {
+                        // Check if the contribution is a pledge (assuming pledge is indicated by a non-zero amount)
+                        if (contribution.Pledge > 0) {
+                            // Add the month and amount to the pledgedMonths object
+                            pledgedMonths[contribution.Month] = contribution.Pledge;
+                        }
+                    });
+
+                    // Iterate through the months affected by the pledge for the current person
+                    Object.entries(pledgedMonths).forEach(([month, amount]) => {
+                        // Create a new table row for each pledged month
+                        const pledgeRow = document.createElement('tr');
+                        pledgeRow.innerHTML = `
+                            <td></td> <!-- Empty cell for spacing -->
+                            <td></td> <!-- Empty cell for spacing -->
+                            <td></td> <!-- Empty cell for spacing -->
+                            <td>${month}</td>
+                            <td>${amount}</td>
+                        `;
+                        closedAccountsContainer.appendChild(pledgeRow); // Append the pledge row to the table body
+                    });
                 });
+
 
                 // Update table body with constructed rows
                 tbody.innerHTML = rowsHTML;
