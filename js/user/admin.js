@@ -194,9 +194,8 @@ if (ConLudaMeisMov) {
                         <td>${month}</td>
                         <td class="text-truncate">
                             <ul class="list-unstyled order-list m-b-0 m-b-0">
-                                <li class="team-member team-member-sm"><img class="rounded-circle" src="assets/img/users/user-1.png" alt="user" data-toggle="tooltip" title="" data-original-title="Wildan Ahdian"></li>
-                                <li class="team-member team-member-sm"><img class="rounded-circle" src="assets/img/users/user-2.png" alt="user" data-toggle="tooltip" title="" data-original-title="John Deo"></li>
-                                <li class="avatar avatar-sm"><span class="badge badge-primary">+7</span></li>
+                                <li class="team-member team-member-sm"><img class="rounded-circle" src="assets/img/products/product-2.png" alt="user" data-toggle="tooltip" title="" data-original-title="Wildan Ahdian"></li>
+                                <li class="avatar avatar-sm"><span class="badge badge-primary">+12</span></li>
                             </ul>
                         </td>
                         <td class="align-middle">
@@ -208,7 +207,7 @@ if (ConLudaMeisMov) {
                         <td>${totalContribution}</td>
                         <td>${totalPledge}</td>
                         <td>
-                            <div class="badge badge-success">High</div>
+                            <div>-</div>
                         </td>
                         <td><a href="#" class="btn btn-outline-primary">Detail</a></td>
                     </tr>`;
