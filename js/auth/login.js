@@ -24,11 +24,12 @@ async function handleLogin() {
     // const IdInput = document.getElementById('Id').value;
     
     const data = await fetchData();
-    const match = data.find(person => person.Name === nameInput);
+    const match = data.find(person => person.VId === nameInput && person.VId);
     // && person.Id == IdInput
 
     if (match) {
-        const parKovComaaadhere = match.Name;
+        const parKovComaaadhere = match.Name + "!" + match.VId;
+        console.log(parKovComaaadhere)
 
         // future use 
         // alert('Login successful!');
