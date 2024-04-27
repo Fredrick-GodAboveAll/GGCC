@@ -43,7 +43,7 @@
             { "Month": "oct", "Amount": 1000, "Pledge": 0, "Mode": "m" },
             { "Month": "Nov", "Amount": 0, "Pledge": 0, "Mode": "-" },
             { "Month": "Dec", "Amount": 0, "Pledge": 0, "Mode": "-" },
-            { "Month": "Jan", "Amount": 0, "Pledge": 0, "Mode": "-" },
+            { "Month": "Jan", "Amount": 1000, "Pledge": 0, "Mode": "c" },
             { "Month": "Feb", "Amount": 0, "Pledge": 1000, "Mode": "-" },
             { "Month": "Mar", "Amount": 0, "Pledge": 0, "Mode": "-" }
         ]
